@@ -1,0 +1,58 @@
+{
+  "asof": "2022-09-17T00:00:00+00:00",
+  "cohort": "wave5",
+  "pairs": [
+    "LUNA/USDT",
+    "RVN/USDT",
+    "INJ/USDT",
+    "SANTOS/USDT",
+    "LDO/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "LUNA/USDT",
+      "symbol": "LUNAUSDT",
+      "amplitude": 13.832517869917664,
+      "trendiness": 0.2891978752419916,
+      "median_daily": 262443880.75721702,
+      "wave_score": 9.832183092690597,
+      "period_h": 14.0
+    },
+    {
+      "pair": "RVN/USDT",
+      "symbol": "RVNUSDT",
+      "amplitude": 8.780137998397505,
+      "trendiness": 0.03648533986989722,
+      "median_daily": 103876476.624989,
+      "wave_score": 8.459791679421373,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "INJ/USDT",
+      "symbol": "INJUSDT",
+      "amplitude": 5.317852399154327,
+      "trendiness": 0.00800915331807781,
+      "median_daily": 7328157.203999999,
+      "wave_score": 5.275260903966592,
+      "period_h": 13.44
+    },
+    {
+      "pair": "SANTOS/USDT",
+      "symbol": "SANTOSUSDT",
+      "amplitude": 5.421846845700436,
+      "trendiness": 0.0842745438748914,
+      "median_daily": 14103071.76203,
+      "wave_score": 4.964923175819513,
+      "period_h": 12.923076923076923
+    },
+    {
+      "pair": "LDO/USDT",
+      "symbol": "LDOUSDT",
+      "amplitude": 5.681779145277157,
+      "trendiness": 0.1407480314960629,
+      "median_daily": 25030203.856799997,
+      "wave_score": 4.882079915184014,
+      "period_h": 12.923076923076923
+    }
+  ]
+}

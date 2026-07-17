@@ -1,0 +1,108 @@
+{
+  "asof": "2022-09-17T00:00:00+00:00",
+  "cohort": "volume",
+  "pairs": [
+    "BTC/USDT",
+    "ETH/USDT",
+    "LUNA/USDT",
+    "ETC/USDT",
+    "LUNC/USDT",
+    "BNB/USDT",
+    "SOL/USDT",
+    "XRP/USDT",
+    "RVN/USDT",
+    "ATOM/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "BTC/USDT",
+      "symbol": "BTCUSDT",
+      "amplitude": 2.05270748446523,
+      "trendiness": 0.1997533333954883,
+      "median_daily": 6655264974.213759,
+      "wave_score": 1.6426723219574328,
+      "period_h": 12.444444444444445
+    },
+    {
+      "pair": "ETH/USDT",
+      "symbol": "ETHUSDT",
+      "amplitude": 2.9224742618682944,
+      "trendiness": 0.33429291914931564,
+      "median_daily": 1093457780.4845,
+      "wave_score": 1.945511809729601,
+      "period_h": 11.586206896551724
+    },
+    {
+      "pair": "LUNA/USDT",
+      "symbol": "LUNAUSDT",
+      "amplitude": 13.832517869917664,
+      "trendiness": 0.2891978752419916,
+      "median_daily": 262443880.75721702,
+      "wave_score": 9.832183092690597,
+      "period_h": 14.0
+    },
+    {
+      "pair": "ETC/USDT",
+      "symbol": "ETCUSDT",
+      "amplitude": 4.41095019634179,
+      "trendiness": 0.1653975022844957,
+      "median_daily": 170048229.1135,
+      "wave_score": 3.6813900511655517,
+      "period_h": 13.44
+    },
+    {
+      "pair": "LUNC/USDT",
+      "symbol": "LUNCUSDT",
+      "amplitude": 11.399537748949493,
+      "trendiness": 0.1443638923538638,
+      "median_daily": 124350876.69060323,
+      "wave_score": 9.753856108476342,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "BNB/USDT",
+      "symbol": "BNBUSDT",
+      "amplitude": 1.7827298621369736,
+      "trendiness": 0.22832722832722863,
+      "median_daily": 118512336.0126,
+      "wave_score": 1.375684093859056,
+      "period_h": 12.444444444444445
+    },
+    {
+      "pair": "SOL/USDT",
+      "symbol": "SOLUSDT",
+      "amplitude": 3.2623451814502586,
+      "trendiness": 0.10627177700348411,
+      "median_daily": 105993547.54240002,
+      "wave_score": 2.9156499618187857,
+      "period_h": 13.44
+    },
+    {
+      "pair": "XRP/USDT",
+      "symbol": "XRPUSDT",
+      "amplitude": 2.0476101969031935,
+      "trendiness": 0.0028901734104047065,
+      "median_daily": 103931939.6545,
+      "wave_score": 2.04169224835723,
+      "period_h": 16.0
+    },
+    {
+      "pair": "RVN/USDT",
+      "symbol": "RVNUSDT",
+      "amplitude": 8.780137998397505,
+      "trendiness": 0.03648533986989722,
+      "median_daily": 103876476.624989,
+      "wave_score": 8.459791679421373,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "ATOM/USDT",
+      "symbol": "ATOMUSDT",
+      "amplitude": 4.548789793913504,
+      "trendiness": 0.06119311193111946,
+      "median_daily": 82151475.96804999,
+      "wave_score": 4.270435190903421,
+      "period_h": 13.44
+    }
+  ]
+}

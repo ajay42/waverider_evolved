@@ -1,0 +1,27 @@
+Monte Carlo bootstrap - 3000 reshuffled paths per run, deal-level blocks, seed 42
+CAVEAT: reshuffling treats deals as independent; real alt-coins
+crash together, so true tails are worse than these bands.
+
+=== TAIL results ===
+run                            deals  ddP50$  ddP95$  ddP99$ ddP99% P5 final$ P(loss)
+bear2022a_all_m15                 28     335     491     563   5.6%    -489.3 100.0%
+bear2022a_all_m15_v105            28     304     449     517   5.2%    -448.1 100.0%
+bear2022a_brake_only_m15          31     338     499     569   5.7%    -498.8 100.0%
+bear2022a_freeze_agg_fixed        85     784    1348    1609  16.1%   -1339.5  99.9%
+bear2022a_no_governors            31     982    1491    1715  17.1%   -1488.7 100.0%
+bear2022b_all_m15                178      34      77     100   1.0%     -63.6  59.2%
+bear2022b_all_m15_v105           173      32      72      91   0.9%     -56.9  59.5%
+bear2022b_brake_only_m15         185      41      91     117   1.2%     -74.5  60.8%
+bear2022b_freeze_agg_fixed       247      21      44      58   0.6%      41.0   0.6%
+bear2022b_no_governors           423      16      33      42   0.4%     198.8   0.0%
+crash2021_all_m15                 76     299     481     554   5.5%    -475.6 100.0%
+crash2021_all_m15_v105            76     277     445     530   5.3%    -441.1 100.0%
+crash2021_brake_only_m15          76     301     487     583   5.8%    -482.0 100.0%
+crash2021_freeze_agg_fixed       133     354     661     822   8.2%    -646.0  98.3%
+crash2021_no_governors           271     316     655     840   8.4%    -622.6  92.5%
+ftxchop_all_m15                  194      26      63      82   0.8%     -32.5  19.3%
+ftxchop_all_m15_v105             186      25      59      79   0.8%     -29.9  21.5%
+ftxchop_brake_only_m15           191      26      59      82   0.8%     -27.3  19.1%
+ftxchop_freeze_agg_fixed         267      36      82     117   1.2%     -20.2   9.8%
+ftxchop_no_governors             314      44     104     149   1.5%     -23.2   9.3%
+

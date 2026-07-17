@@ -1,0 +1,28 @@
+services:
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable
+    restart: unless-stopped
+    container_name: freqtrade
+    volumes:
+      - "./user_data:/freqtrade/user_data"
+    # Expose the local REST API / FreqUI on http://127.0.0.1:8080
+    ports:
+      - "127.0.0.1:8080:8080"
+    command: >
+      trade
+      --logfile /freqtrade/user_data/logs/freqtrade.log
+      --db-url sqlite:////freqtrade/user_data/tradesv3.sqlite
+      --config /freqtrade/user_data/config.json
+      --strategy WaveRiderDCA
+
+  # Sidecar: ranks Binance USDT markets by 24h volume delta, retires coins
+  # that finished their preset runs, and refills pairlist.json, which the
+  # bot's RemotePairList re-reads every few minutes.
+  pairlist-updater:
+    image: freqtradeorg/freqtrade:stable
+    restart: unless-stopped
+    container_name: freqtrade-pairlist
+    entrypoint: ["python3"]
+    command: ["/freqtrade/user_data/scripts/pairlist_updater.py"]
+    volumes:
+      - "./user_data:/freqtrade/user_data"

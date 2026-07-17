@@ -1,0 +1,108 @@
+{
+  "asof": "2022-06-13T00:00:00+00:00",
+  "cohort": "wave",
+  "pairs": [
+    "ASR/USDT",
+    "TRB/USDT",
+    "BEL/USDT",
+    "OG/USDT",
+    "RSR/USDT",
+    "LUNA/USDT",
+    "MTL/USDT",
+    "GTC/USDT",
+    "DODO/USDT",
+    "BAND/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "ASR/USDT",
+      "symbol": "ASRUSDT",
+      "amplitude": 12.497689217483085,
+      "trendiness": 0.04648713705431023,
+      "median_daily": 7503511.3379,
+      "wave_score": 11.916707425967774,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "TRB/USDT",
+      "symbol": "TRBUSDT",
+      "amplitude": 11.193477546909195,
+      "trendiness": 0.04356992269852425,
+      "median_daily": 23102245.9474,
+      "wave_score": 10.705778595462695,
+      "period_h": 17.68421052631579
+    },
+    {
+      "pair": "BEL/USDT",
+      "symbol": "BELUSDT",
+      "amplitude": 11.583934110780852,
+      "trendiness": 0.08307880268784357,
+      "median_daily": 71946829.5709,
+      "wave_score": 10.62155473444231,
+      "period_h": 21.0
+    },
+    {
+      "pair": "OG/USDT",
+      "symbol": "OGUSDT",
+      "amplitude": 10.034578235191482,
+      "trendiness": 0.019493177387914184,
+      "median_daily": 5359642.1426,
+      "wave_score": 9.83897242163999,
+      "period_h": 14.0
+    },
+    {
+      "pair": "RSR/USDT",
+      "symbol": "RSRUSDT",
+      "amplitude": 9.174257001997155,
+      "trendiness": 0.04990019960079839,
+      "median_daily": 23769108.670028996,
+      "wave_score": 8.716459746408475,
+      "period_h": 16.0
+    },
+    {
+      "pair": "LUNA/USDT",
+      "symbol": "LUNAUSDT",
+      "amplitude": 12.330210917629389,
+      "trendiness": 0.32287001337124016,
+      "median_daily": 67270979.921541,
+      "wave_score": 8.349155553784177,
+      "period_h": 16.0
+    },
+    {
+      "pair": "MTL/USDT",
+      "symbol": "MTLUSDT",
+      "amplitude": 7.641181463108755,
+      "trendiness": 0.028037383177570194,
+      "median_daily": 15332366.9127,
+      "wave_score": 7.4269427304982285,
+      "period_h": 14.0
+    },
+    {
+      "pair": "GTC/USDT",
+      "symbol": "GTCUSDT",
+      "amplitude": 7.714795783063062,
+      "trendiness": 0.1062114746325273,
+      "median_daily": 8760103.9406,
+      "wave_score": 6.895395946455131,
+      "period_h": 13.44
+    },
+    {
+      "pair": "DODO/USDT",
+      "symbol": "DODOUSDT",
+      "amplitude": 7.361734653846195,
+      "trendiness": 0.08271334792122537,
+      "median_daily": 5434144.010919999,
+      "wave_score": 6.752820934118873,
+      "period_h": 16.0
+    },
+    {
+      "pair": "BAND/USDT",
+      "symbol": "BANDUSDT",
+      "amplitude": 7.614472256823258,
+      "trendiness": 0.12006382130035895,
+      "median_daily": 8578537.8849,
+      "wave_score": 6.700249620483489,
+      "period_h": 17.68421052631579
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "asof": "2026-06-02T00:00:00+00:00",
+  "cohort": "wave",
+  "pairs": [
+    "ALLO/USDT",
+    "HEI/USDT",
+    "WLD/USDT",
+    "XLM/USDT",
+    "NEAR/USDT",
+    "FET/USDT",
+    "JTO/USDT",
+    "INJ/USDT",
+    "AR/USDT",
+    "XPL/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "ALLO/USDT",
+      "symbol": "ALLOUSDT",
+      "amplitude": 14.244659855241693,
+      "trendiness": 0.14585350112939657,
+      "median_daily": 39619816.74734,
+      "wave_score": 12.167026342957328,
+      "period_h": 16.0
+    },
+    {
+      "pair": "HEI/USDT",
+      "symbol": "HEIUSDT",
+      "amplitude": 11.566139676531305,
+      "trendiness": 0.0841750841750842,
+      "median_daily": 5003252.76324,
+      "wave_score": 10.5925588956785,
+      "period_h": 18.666666666666668
+    },
+    {
+      "pair": "WLD/USDT",
+      "symbol": "WLDUSDT",
+      "amplitude": 6.942615329892476,
+      "trendiness": 0.1939915735482688,
+      "median_daily": 54936087.33161999,
+      "wave_score": 5.595806457506301,
+      "period_h": 18.666666666666668
+    },
+    {
+      "pair": "XLM/USDT",
+      "symbol": "XLMUSDT",
+      "amplitude": 7.070922595170305,
+      "trendiness": 0.26228602981778015,
+      "median_daily": 140764083.33179998,
+      "wave_score": 5.2163183805342515,
+      "period_h": 15.272727272727273
+    },
+    {
+      "pair": "NEAR/USDT",
+      "symbol": "NEARUSDT",
+      "amplitude": 5.199813678174025,
+      "trendiness": 0.033294163728946315,
+      "median_daily": 141764493.7536,
+      "wave_score": 5.026690230212885,
+      "period_h": 16.0
+    },
+    {
+      "pair": "FET/USDT",
+      "symbol": "FETUSDT",
+      "amplitude": 5.692539034964658,
+      "trendiness": 0.1578171091445427,
+      "median_daily": 36892545.42214,
+      "wave_score": 4.79415898077407,
+      "period_h": 12.444444444444445
+    },
+    {
+      "pair": "JTO/USDT",
+      "symbol": "JTOUSDT",
+      "amplitude": 5.47918199162605,
+      "trendiness": 0.14755244755244765,
+      "median_daily": 7107864.75772,
+      "wave_score": 4.670715278176331,
+      "period_h": 21.0
+    },
+    {
+      "pair": "INJ/USDT",
+      "symbol": "INJUSDT",
+      "amplitude": 5.381327103113898,
+      "trendiness": 0.20806335493160555,
+      "median_daily": 19880951.56363,
+      "wave_score": 4.261670132055642,
+      "period_h": 15.272727272727273
+    },
+    {
+      "pair": "AR/USDT",
+      "symbol": "ARUSDT",
+      "amplitude": 4.759733672369949,
+      "trendiness": 0.10679611650485427,
+      "median_daily": 5163854.1678,
+      "wave_score": 4.25141260056345,
+      "period_h": 16.0
+    },
+    {
+      "pair": "XPL/USDT",
+      "symbol": "XPLUSDT",
+      "amplitude": 4.78363753052049,
+      "trendiness": 0.119351100811124,
+      "median_daily": 8586731.62913,
+      "wave_score": 4.212705125371463,
+      "period_h": 19.764705882352942
+    }
+  ]
+}

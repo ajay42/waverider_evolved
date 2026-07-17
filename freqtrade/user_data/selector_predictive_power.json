@@ -1,0 +1,98 @@
+{
+  "generated": "2026-07-16T16:18:28.070155+00:00",
+  "dates": 26,
+  "step_days": 14,
+  "skim_threshold_pct": 2.2,
+  "observations": 2014,
+  "median_date_spearman": 0.806,
+  "per_date_spearman": [
+    0.882,
+    0.868,
+    0.815,
+    0.861,
+    0.801,
+    0.844,
+    0.891,
+    0.807,
+    0.756,
+    0.801,
+    0.757,
+    0.9,
+    0.763,
+    0.841,
+    0.907,
+    0.875,
+    0.829,
+    0.802,
+    0.719,
+    0.712,
+    0.812,
+    0.793,
+    0.688,
+    0.772,
+    0.805,
+    0.679
+  ],
+  "deciles": [
+    {
+      "decile": 1,
+      "avg_score": 0.8,
+      "avg_forward_waves": 6.23,
+      "n": 201
+    },
+    {
+      "decile": 2,
+      "avg_score": 1.59,
+      "avg_forward_waves": 15.4,
+      "n": 201
+    },
+    {
+      "decile": 3,
+      "avg_score": 1.97,
+      "avg_forward_waves": 20.15,
+      "n": 202
+    },
+    {
+      "decile": 4,
+      "avg_score": 2.25,
+      "avg_forward_waves": 22.17,
+      "n": 201
+    },
+    {
+      "decile": 5,
+      "avg_score": 2.54,
+      "avg_forward_waves": 25.72,
+      "n": 202
+    },
+    {
+      "decile": 6,
+      "avg_score": 2.9,
+      "avg_forward_waves": 28.02,
+      "n": 201
+    },
+    {
+      "decile": 7,
+      "avg_score": 3.38,
+      "avg_forward_waves": 29.2,
+      "n": 201
+    },
+    {
+      "decile": 8,
+      "avg_score": 4.02,
+      "avg_forward_waves": 32.13,
+      "n": 202
+    },
+    {
+      "decile": 9,
+      "avg_score": 5.03,
+      "avg_forward_waves": 33.67,
+      "n": 201
+    },
+    {
+      "decile": 10,
+      "avg_score": 7.97,
+      "avg_forward_waves": 36.96,
+      "n": 202
+    }
+  ]
+}

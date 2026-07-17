@@ -1,0 +1,75 @@
+2026-07-14 17:17:01 [pairlist] scoring 435 symbols as of 2026-03-02 (one klines call each)
+
+WAVE cohort (C:\Users\ajay\Desktop\code by claude\freqtrade\user_data\cohorts\20260302_wave.json):
+  ESP/USDT       score   9.78  amp 11.84%  trend 0.17  medvol $  21.6M
+  KITE/USDT      score   6.48  amp  6.65%  trend 0.03  medvol $  24.3M
+  ENSO/USDT      score   6.38  amp  8.08%  trend 0.21  medvol $  16.0M
+  FOGO/USDT      score   5.53  amp  5.73%  trend 0.03  medvol $   5.3M
+  ZAMA/USDT      score   5.06  amp  5.13%  trend 0.01  medvol $   8.1M
+  PUMP/USDT      score   4.32  amp  4.44%  trend 0.03  medvol $  19.0M
+  VIRTUAL/USDT   score   3.86  amp  4.60%  trend 0.16  medvol $  15.4M
+  ZRO/USDT       score   3.86  amp  4.72%  trend 0.18  medvol $  11.6M
+  OP/USDT        score   3.73  amp  3.97%  trend 0.06  medvol $   6.8M
+  WIF/USDT       score   3.64  amp  4.00%  trend 0.09  medvol $   8.0M
+
+VOLUME cohort (C:\Users\ajay\Desktop\code by claude\freqtrade\user_data\cohorts\20260302_volume.json):
+  BTC/USDT       score   2.00  amp  2.06%  trend 0.03  medvol $1469.5M
+  ETH/USDT       score   2.52  amp  2.75%  trend 0.08  medvol $ 897.1M
+  SOL/USDT       score   2.64  amp  3.01%  trend 0.12  medvol $ 379.7M
+  XRP/USDT       score   2.65  amp  2.69%  trend 0.02  medvol $ 246.8M
+  BNB/USDT       score   1.63  amp  1.88%  trend 0.13  medvol $ 103.8M
+  PAXG/USDT      score   0.73  amp  1.00%  trend 0.27  medvol $  84.5M
+  DOGE/USDT      score   2.79  amp  2.83%  trend 0.02  medvol $  83.3M
+  ZEC/USDT       score   3.24  amp  3.78%  trend 0.14  medvol $  49.5M
+  SUI/USDT       score   3.44  amp  3.50%  trend 0.02  medvol $  47.0M
+  PEPE/USDT      score   2.95  amp  3.58%  trend 0.17  medvol $  44.5M
+2026-07-14 17:19:02 [pairlist] scoring 435 symbols as of 2026-06-02 (one klines call each)
+
+WAVE cohort (C:\Users\ajay\Desktop\code by claude\freqtrade\user_data\cohorts\20260602_wave.json):
+  ALLO/USDT      score  12.17  amp 14.24%  trend 0.15  medvol $  39.6M
+  HEI/USDT       score  10.59  amp 11.57%  trend 0.08  medvol $   5.0M
+  WLD/USDT       score   5.60  amp  6.94%  trend 0.19  medvol $  54.9M
+  XLM/USDT       score   5.22  amp  7.07%  trend 0.26  medvol $ 140.8M
+  NEAR/USDT      score   5.03  amp  5.20%  trend 0.03  medvol $ 141.8M
+  FET/USDT       score   4.79  amp  5.69%  trend 0.16  medvol $  36.9M
+  JTO/USDT       score   4.67  amp  5.48%  trend 0.15  medvol $   7.1M
+  INJ/USDT       score   4.26  amp  5.38%  trend 0.21  medvol $  19.9M
+  AR/USDT        score   4.25  amp  4.76%  trend 0.11  medvol $   5.2M
+  XPL/USDT       score   4.21  amp  4.78%  trend 0.12  medvol $   8.6M
+
+VOLUME cohort (C:\Users\ajay\Desktop\code by claude\freqtrade\user_data\cohorts\20260602_volume.json):
+  BTC/USDT       score   0.62  amp  1.05%  trend 0.41  medvol $1299.6M
+  ETH/USDT       score   1.10  amp  1.35%  trend 0.19  medvol $ 570.7M
+  SOL/USDT       score   1.34  amp  1.54%  trend 0.13  medvol $ 177.4M
+  NEAR/USDT      score   5.03  amp  5.20%  trend 0.03  medvol $ 141.8M
+  XLM/USDT       score   5.22  amp  7.07%  trend 0.26  medvol $ 140.8M
+  ZEC/USDT       score   3.26  amp  4.06%  trend 0.20  medvol $ 134.7M
+  XRP/USDT       score   1.26  amp  1.44%  trend 0.12  medvol $ 109.0M
+  BNB/USDT       score   1.63  amp  1.87%  trend 0.13  medvol $  92.5M
+  WLD/USDT       score   5.60  amp  6.94%  trend 0.19  medvol $  54.9M
+  SUI/USDT       score   1.65  amp  2.60%  trend 0.37  medvol $  54.7M
+2026-07-14 17:21:04 [pairlist] scoring 435 symbols as of 2024-11-06 (one klines call each)
+
+WAVE cohort (C:\Users\ajay\Desktop\code by claude\freqtrade\user_data\cohorts\20241106_wave.json):
+  RARE/USDT      score   5.07  amp  5.92%  trend 0.14  medvol $  14.4M
+  RAY/USDT       score   5.07  amp  5.15%  trend 0.02  medvol $  32.2M
+  MASK/USDT      score   5.03  amp  5.04%  trend 0.00  medvol $  31.6M
+  BICO/USDT      score   5.03  amp  5.52%  trend 0.09  medvol $  11.9M
+  PORTO/USDT     score   4.87  amp  5.28%  trend 0.08  medvol $   6.7M
+  LAZIO/USDT     score   4.84  amp  4.87%  trend 0.01  medvol $   6.3M
+  BAR/USDT       score   4.61  amp  5.26%  trend 0.12  medvol $   6.1M
+  OGN/USDT       score   4.56  amp  4.85%  trend 0.06  medvol $   5.7M
+  SANTOS/USDT    score   4.53  amp  5.56%  trend 0.18  medvol $  25.2M
+  ARKM/USDT      score   4.19  amp  4.20%  trend 0.00  medvol $  30.9M
+
+VOLUME cohort (C:\Users\ajay\Desktop\code by claude\freqtrade\user_data\cohorts\20241106_volume.json):
+  BTC/USDT       score   1.08  amp  1.35%  trend 0.20  medvol $2033.9M
+  ETH/USDT       score   1.09  amp  1.69%  trend 0.36  medvol $ 808.0M
+  SOL/USDT       score   1.81  amp  2.26%  trend 0.20  medvol $ 486.9M
+  DOGE/USDT      score   3.77  amp  3.94%  trend 0.04  medvol $ 371.1M
+  SUI/USDT       score   3.29  amp  3.51%  trend 0.06  medvol $ 154.7M
+  PEPE/USDT      score   2.48  amp  3.18%  trend 0.22  medvol $ 152.7M
+  NEIRO/USDT     score   3.66  amp  4.96%  trend 0.26  medvol $ 140.1M
+  BNB/USDT       score   0.92  amp  1.31%  trend 0.30  medvol $ 121.3M
+  WIF/USDT       score   2.52  amp  3.71%  trend 0.32  medvol $ 102.2M
+  XRP/USDT       score   1.34  amp  1.46%  trend 0.08  medvol $  97.4M

@@ -1,0 +1,58 @@
+{
+  "asof": "2026-03-02T00:00:00+00:00",
+  "cohort": "wave5",
+  "pairs": [
+    "ESP/USDT",
+    "KITE/USDT",
+    "ENSO/USDT",
+    "FOGO/USDT",
+    "ZAMA/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "ESP/USDT",
+      "symbol": "ESPUSDT",
+      "amplitude": 11.838107372572821,
+      "trendiness": 0.17346584196261028,
+      "median_daily": 21578596.11405,
+      "wave_score": 9.784600109945693,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "KITE/USDT",
+      "symbol": "KITEUSDT",
+      "amplitude": 6.651266301814398,
+      "trendiness": 0.025421133231240515,
+      "median_daily": 24340372.618789997,
+      "wave_score": 6.482183574999514,
+      "period_h": 15.272727272727273
+    },
+    {
+      "pair": "ENSO/USDT",
+      "symbol": "ENSOUSDT",
+      "amplitude": 8.075592658746732,
+      "trendiness": 0.20947702976018492,
+      "median_daily": 16006320.412819998,
+      "wave_score": 6.383941495039312,
+      "period_h": 25.846153846153847
+    },
+    {
+      "pair": "FOGO/USDT",
+      "symbol": "FOGOUSDT",
+      "amplitude": 5.730388697195614,
+      "trendiness": 0.034346624555862584,
+      "median_daily": 5332364.46724,
+      "wave_score": 5.533569188053877,
+      "period_h": 19.764705882352942
+    },
+    {
+      "pair": "ZAMA/USDT",
+      "symbol": "ZAMAUSDT",
+      "amplitude": 5.125712047020287,
+      "trendiness": 0.012229539040451537,
+      "median_daily": 8090731.63872,
+      "wave_score": 5.06302695143114,
+      "period_h": 22.4
+    }
+  ]
+}

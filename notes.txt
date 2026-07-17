@@ -1,0 +1,99 @@
+for the TP take profit block:
+
+the average of the first and the last filled safety orders is compared to the average price of the first, last and the second last filled safety orders. whichever one of these two subsets have average price closer to the current price, is primed for a TP order and closed profitably at first opportunity.
+
+This strategy reduces the exposure on slight price movements also, not waiting for full recovery for the whole position.
+
+Of all the safety order positions closed, the closest unfilled safety order to the current price point or the last one closed or none, depending on the strategy, is repopulated to take advantage of the price movement to close other open positions in profit one by one.
+
+
+the selection of the safety orders is based on:
+
+the first order, the furthest away from the current price, needs to closed somehow to bring the average position price down
+
+only combination of first with last or first with the last two, depending on the volume and deviation multiplier, can reasonably bring the first order average price closest to current price
+
+upon TP execution, saftey orders need to be floated again in order to close the next first order in the table. these new safety orders can be either the prior last one or the prior last two or the next safety order beside these two or the one closest to price currently
+
+the startegy assumes every trade as a losing trade and hence does not wait for any condition and opens a base order immidiately. it then put effort to close all open trades profitably and that it the core focus and strength. this is a reason for the base order being very small compared to following safety orders as that helps the sub-average of the selected orders keep closer to current price
+
+
+clude queries:
+
+logic of TP (stick to long trades only now):
+> compare the combination of first and last filed order with first and last two filled orders
+> select the sub group with lowest take profit price point
+> close the selected sub group with profit at first opportunity
+> re open the last order to be filled again
+> readjust the index to identify the new first and last two filled orders
+> repeat
+
+phase 0:
+1. i need total 1000 usdt exposure max per coin, upto 10 coins total
+non renewal of closed positions as opposed to hard stoploss
+the whole trick is to get out of badly stuck DCA positions profitably
+2. BO can have pre defined number of entries, set it to 3
+3.global cap per deal applies per new SO, fresh or reopened. also, SO can open at only pre calculated points only, not random
+4. freqtrade give more flexibility, stick to it
+
+phase 1:
+5.implement it in python only, structured in a way that its progressively understandable to a beginner
+6. will do
+7. good idea
+
+phase 2:
+implement freqtrade
+
+phase 3:
+ok
+
+phase 4:
+ok
+
+
+the idea behind Wave Rider strategy:
+Regardless of what strategy, most traders find themselves stuck in bad deals which only get worse and wreck the account.
+Regardless of the strategy, getting out of bad deals is most important skill.
+Wave Rider starts by getting 'stuck' in a bad deal with a very small Base Order.
+Rest of the strategy of selective sub order combinations are to reduce the exposure by each wave of the price fluctuations.
+
+For this we take advantage of crypto volatility.
+A newly volative coin will either close all rounds of new trades easily of will have periodic rebounds after sudden trend to generate price waves.
+This risk assumption mitigated the profit opportunity of strong trends but should also keep the account much safer.
+
+there is additional input(assuming long trades):
+1. the combination of extreme orders should be compared for better closure postential
+2. can the combination of first and last filled orders have higher price point than a combination of first and last two filled orders
+3. the best combo should be closed
+4. the last closed SO should be reopened to be filled as it has the highest chance of closing the next first order
+
+analyse this suggestion for its merit
+
+
+There are three possible ways of doing Wave Rider:
+1. pure Wave Rider all the way
+2. normal DCA with better size orders to take advantage of trends relatively safely. Wave Rider kicks in in deal isnt closed in 12 hours by breaking the overall position into smaller volume sub position to close with larger size safety order combined average
+3. normal DCA at the beginning for 6 hours, then this turned into Grid trading for next 12 hours to reduce maximum possible exposure, and finally Wave Rider after 18 hours to close position overall
+4. after 48 hours, Wave Rider should stop new orders and wait another 48 hours, then a systematic decision is to be taken on stop loss or hedging or closing the position.
+
+Analyse deeply which one will be better?
+
+some more points to consider:
+1. should SO devialtion, volume and multipliers be calculated dynamically
+2. how do we tell from UI whcih lifecycle phase the deal is under
+3. can the chart have more time frames like 4 hours and 15 mins to check the overall trend
+4. how do we ascertain if we win better with few coins but larger gains or many coins but smaller gains whit high frequency trades
+5. would it have worked on BTC slump recently. i have a classic DCA deal on BTC stuck for months
+
+
+adopt current strategy as an accumulator strategy that:
+1. accumulates BTC and ETH as profit part of a deal
+2. take advantage of the trends and cherishes the falls for best accumulation periods
+3. a good price point accumulation should be moved out a trade and kept as a whole
+4. removes most of the complexity as coins are fixed and crash is welcomed
+
+combination of BTC ETH USDT coins may have better volatility/opportunity. Explore merit
+
+
+open a new thread of development taking the Wave Rider as the initial core and develop it organically in order to refine and optimise the logic not only with merit but also with data. a pure logic and data driven model.
+ do an initial estimation of how many steps or time it may take

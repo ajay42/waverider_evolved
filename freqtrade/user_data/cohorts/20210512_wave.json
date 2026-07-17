@@ -1,0 +1,108 @@
+{
+  "asof": "2021-05-12T00:00:00+00:00",
+  "cohort": "wave",
+  "pairs": [
+    "CTSI/USDT",
+    "DOGE/USDT",
+    "RLC/USDT",
+    "ETC/USDT",
+    "TRB/USDT",
+    "TLM/USDT",
+    "QTUM/USDT",
+    "LSK/USDT",
+    "STRAX/USDT",
+    "TKO/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "CTSI/USDT",
+      "symbol": "CTSIUSDT",
+      "amplitude": 11.382802566453867,
+      "trendiness": 0.0690248608700187,
+      "median_daily": 87030647.939029,
+      "wave_score": 10.597106202993498,
+      "period_h": 16.0
+    },
+    {
+      "pair": "DOGE/USDT",
+      "symbol": "DOGEUSDT",
+      "amplitude": 12.046350703546828,
+      "trendiness": 0.12113779534506186,
+      "median_daily": 7747900489.935062,
+      "wave_score": 10.58708233736573,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "RLC/USDT",
+      "symbol": "RLCUSDT",
+      "amplitude": 14.128044140651598,
+      "trendiness": 0.2735372767723418,
+      "median_daily": 157638996.452786,
+      "wave_score": 10.26349742029832,
+      "period_h": 24.0
+    },
+    {
+      "pair": "ETC/USDT",
+      "symbol": "ETCUSDT",
+      "amplitude": 11.947579963973675,
+      "trendiness": 0.1416671726063991,
+      "median_daily": 2073744977.09948,
+      "wave_score": 10.255000090988661,
+      "period_h": 14.0
+    },
+    {
+      "pair": "TRB/USDT",
+      "symbol": "TRBUSDT",
+      "amplitude": 9.882478732866433,
+      "trendiness": 0.015381250911211555,
+      "median_daily": 69584482.121611,
+      "wave_score": 9.730473847851503,
+      "period_h": 18.666666666666668
+    },
+    {
+      "pair": "TLM/USDT",
+      "symbol": "TLMUSDT",
+      "amplitude": 9.615123392894745,
+      "trendiness": 0.17209623575457592,
+      "median_daily": 160807283.866023,
+      "wave_score": 7.960396850661793,
+      "period_h": 19.764705882352942
+    },
+    {
+      "pair": "QTUM/USDT",
+      "symbol": "QTUMUSDT",
+      "amplitude": 10.402856903542745,
+      "trendiness": 0.25229700057558263,
+      "median_daily": 228921865.950597,
+      "wave_score": 7.778247309361916,
+      "period_h": 16.8
+    },
+    {
+      "pair": "LSK/USDT",
+      "symbol": "LSKUSDT",
+      "amplitude": 10.332504958259324,
+      "trendiness": 0.27296155974032343,
+      "median_daily": 51743008.54718,
+      "wave_score": 7.512128288828234,
+      "period_h": 24.0
+    },
+    {
+      "pair": "STRAX/USDT",
+      "symbol": "STRAXUSDT",
+      "amplitude": 8.715224600582957,
+      "trendiness": 0.14871380727298628,
+      "median_daily": 22638503.181818,
+      "wave_score": 7.419150368991073,
+      "period_h": 16.8
+    },
+    {
+      "pair": "TKO/USDT",
+      "symbol": "TKOUSDT",
+      "amplitude": 6.841853060757984,
+      "trendiness": 0.053892215568862305,
+      "median_daily": 75742782.280325,
+      "wave_score": 6.473130440717135,
+      "period_h": 18.666666666666668
+    }
+  ]
+}

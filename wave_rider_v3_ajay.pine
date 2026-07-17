@@ -1,0 +1,225 @@
+//@version=5
+strategy("wave rider DCA v1.3", "wr1.3", true, max_labels_count=500, pyramiding=99, initial_capital=1000, max_lines_count=500, precision=5, close_entries_rule="ANY")
+
+// Step 1: check condition --> BO
+// Step 2: Create array of SO price points  >> create counter and next SO price point
+// Step 3: Execuite next SO at corresponding price point   >> counter increment
+// Step 4: Check TP of Top and Bottom Positions  >> execute TP
+
+// attach webhook calls to strategy entry and close
+
+// optimized for trading with 3commas bots, make-do solution
+
+//.......................................SETTINGS VARIABLES....................................
+//removed deal start & stop conditions
+
+//strategy timeframe limitation (run just between specific dates)
+limit_date_range = input.bool(title='Limit Date Range', defval=true, group='Backtest date range')
+
+//................................................Input options
+start_time  = input.time(defval=timestamp('01 Aug 2022 00:00 +0000'), title='Start Time', group='Backtest date range')
+end_time    = input.time(defval=timestamp('31 Dec 2022 00:00 +0000'), title='End Time', group='Backtest date range')
+
+in_date_range = true
+if limit_date_range
+    in_date_range := time >= start_time and time <= end_time
+else
+    in_date_range := true
+
+cfg_strategy_type                           = input.string(title='Strategy Type', defval='long', options=['long', 'short'], group='Strategy settings')
+var bool IS_LONG = cfg_strategy_type == 'long'
+
+float cfg_take_profit_perc                  = input.float(title='Take Profit (%)', minval=0.0, step=0.1, defval=2, group='Strategy settings')
+float cfg_base_order_size_usd               = input.float(title='Base order size', defval=10, step=10, group='Strategy settings')
+float cfg_safety_order_size_usd             = input.float(title='Safety order size', defval=10, step=10, group='Strategy settings')
+int   cfg_max_safety_orders                 = input.int(title='Max Safety Trades Count', defval=49, group='Strategy settings')
+float cfg_safety_order_price_deviation_perc = input.float(title='Price Deviation To Open Safety Trades (%)', minval=0.0, step=0.1, defval=2, group='Strategy settings')
+float cfg_safety_order_volume_scale         = input.float(title='Safety Order Volume Scale', defval=1.1, step=0.1, group='Strategy settings')
+float cfg_safety_order_price_step_scale     = input.float(title='Safety Order Step Scale', defval=1, step=0.1, group='Strategy settings')
+
+
+//.........................execution variables
+var float glb_base_order_price          = na
+var float glb_base_order_qty            = na
+var float glb_next_safety_order_price   = na
+var float glb_next_safety_order_qty     = na
+
+var so_size = cfg_max_safety_orders +1 // +1 for BO
+var all_orders_price = array.new_float(so_size + 1) // +1 for BO  to keep list of all order prices
+var all_orders_qty = array.new_float(so_size + 1) // +1 for BO   to keep list of all order qtys
+var int current_so_counter = 0     //current number of the SO price to compared with chart and executed
+var float current_so_price_compare = na    //price at the current counter location of the SO list.
+
+
+//...............WEBHOOK CALLS...............
+
+var string buyBotID  = '"bot_id": 9719613'
+var string sellBotID = '"bot_id": 9719661'
+
+// var string _open_order =na
+// var string sellBotID =na
+
+// if IS_LONG
+//     _open_order == buyBotID
+//     sellBotID == sellBotID
+// if not IS_LONG
+//     _open_order == sellBotID
+//     sellBotID == buyBotID
+
+
+//................SO calculation functions
+
+stepped_deviation(so_index) =>
+    float _stepped_deviation = 0
+    if so_index > 0
+        for _i = 1 to so_index by 1
+            _stepped_deviation := _stepped_deviation + cfg_safety_order_price_deviation_perc * math.pow(cfg_safety_order_price_step_scale, _i - 1)
+    else
+        _stepped_deviation := 0
+
+
+next_so_price(so_index, _bo_price) =>
+    float _stepped_deviation = stepped_deviation(so_index)
+    if IS_LONG
+        float _next_so_price = _bo_price * (1 - _stepped_deviation / 100)
+    else
+        float _next_so_price = _bo_price * (1 + _stepped_deviation / 100)
+
+
+next_so_size_usd(so_index) =>
+    float _next_so_size_usd = cfg_safety_order_size_usd * math.pow(cfg_safety_order_volume_scale, so_index - 1)
+
+
+next_so_qty(so_index, _bo_price) =>
+    float _next_so_size_usd = next_so_size_usd(so_index)
+    float _next_so_qty = _next_so_size_usd / next_so_price(so_index, _bo_price)
+            
+
+//..............................................Step 1: BO order....................
+
+is_deal_started() =>
+    bool _flag = false
+    if IS_LONG and strategy.position_size > 0
+        _flag := true
+    else if not IS_LONG and strategy.position_size < 0
+        _flag := true
+    else
+        _flag := false
+
+
+if in_date_range and not is_deal_started() 
+
+    glb_base_order_qty := cfg_base_order_size_usd / close
+    glb_base_order_price := close
+    current_so_counter := 0
+    // enter BO with market order
+    strategy.entry(id='Od' + str.tostring(current_so_counter), direction=IS_LONG ? strategy.long : strategy.short, qty=glb_base_order_qty, alert_message = buyBotID)
+
+    array.set(all_orders_price, 0, glb_base_order_price)
+    array.set(all_orders_qty, 0, glb_base_order_qty)
+    current_so_counter := current_so_counter + 1
+    
+    for i=1 to so_size-1
+        array.set(all_orders_price, i, na)
+        array.set(all_orders_qty, i, na)
+
+
+////................................Step 2: calculate and create array of SO price points.....................
+//so_index 0 is for BO, from 1..n on it is for SO
+//calculates percent so no adjustment for long vs short
+
+// place all Percentage SO orders as market orders
+if (cfg_max_safety_orders > 0)
+    for _so_number = 1 to cfg_max_safety_orders
+        pass_so_price = next_so_price(_so_number, glb_base_order_price)
+        pass_so_qty = next_so_qty(_so_number, glb_base_order_price)
+
+        array.set(all_orders_price, _so_number, pass_so_price)
+        array.set(all_orders_qty, _so_number, pass_so_qty)
+      
+//.............................Step 3: Execute next SO at the current counter value of the SO price point array......
+
+current_so_price_compare := array.get(all_orders_price, current_so_counter)
+plot(current_so_price_compare, "next SO", color = color.yellow)
+
+if IS_LONG
+    if (current_so_price_compare >= close)
+    //execute the SO order
+        strategy.entry(id="Od"+ str.tostring(current_so_counter), direction= IS_LONG ? strategy.long : strategy.short, qty = array.get(all_orders_qty, current_so_counter), alert_message = buyBotID)
+        current_so_counter := current_so_counter + 1
+else if not IS_LONG
+    if (current_so_price_compare <= close)
+        strategy.entry(id="Od"+ str.tostring(current_so_counter), direction= IS_LONG ? strategy.long : strategy.short, qty = array.get(all_orders_qty, current_so_counter), alert_message = buyBotID)
+        current_so_counter := current_so_counter + 1
+        
+
+//.....................................Step 4:  Check Top and Bottom positions and set TP........
+
+    //update the TP point
+// take_profit_price() =>       // as there's none calling TP function, its all linear execution
+open_order_cnt = strategy.opentrades
+
+plot(open_order_cnt, title =" ord_count", color = color.white, display = display.status_line)
+
+first_order_price = strategy.opentrades.entry_price(0)
+last_order_price = strategy.opentrades.entry_price(open_order_cnt - 1)
+
+first_order_qty = strategy.opentrades.size(0)
+last_order_qty = strategy.opentrades.size(open_order_cnt - 1)
+
+first_order_id = strategy.opentrades.entry_id(0)
+last_order_id = strategy.opentrades.entry_id(open_order_cnt - 1)
+
+float _total_price = na
+float _total_qty = na
+float _avg_price = na
+float _tp_price = na
+
+
+_total_price := (first_order_price * first_order_qty) + (last_order_price * last_order_qty)
+_total_qty := first_order_qty + last_order_qty
+_avg_price := _total_price / _total_qty
+
+
+if IS_LONG
+    _tp_price := _avg_price * (1 + cfg_take_profit_perc/100)
+if not IS_LONG
+    _tp_price := _avg_price * (1 - cfg_take_profit_perc/100)
+    
+plot(_avg_price, "F&L avg price", color = color.green)
+plot(first_order_price, "first order", color = color.blue)
+plot(last_order_price, "last order", color = color.blue)
+plot(_tp_price, "TP price", color = color.aqua, style = plot.style_stepline_diamond)
+
+
+if IS_LONG
+    if (_tp_price <= close)
+        if(open_order_cnt == 1)
+            strategy.close(id=str.tostring(first_order_id), alert_message = sellBotID)
+        if(open_order_cnt > 1)
+            strategy.close(id=str.tostring(first_order_id), alert_message = sellBotID)
+            strategy.close(id=str.tostring(last_order_id), alert_message = sellBotID)
+if not IS_LONG
+    if (_tp_price >= close)
+        if(open_order_cnt == 1)
+            strategy.close(id=str.tostring(first_order_id), alert_message = sellBotID)
+        if(open_order_cnt > 1)
+            strategy.close(id=str.tostring(first_order_id), alert_message = sellBotID)
+            strategy.close(id=str.tostring(last_order_id), alert_message = sellBotID)
+            
+            
+//......PLOT THE AVERAGE OF THE CONVENTIONAL DCA
+//  only relative repreentation, different from true DCA due to closing multiple orders     
+float all_ord_qty_sum    = 0
+float all_ord_price_sum  = 0
+float all_ord_avg_price  = 0
+
+for __i = 0 to (open_order_cnt - 1) by 1
+    all_ord_price_sum := all_ord_price_sum + (strategy.opentrades.entry_price(__i) * strategy.opentrades.size(__i))
+    all_ord_qty_sum := all_ord_qty_sum + (strategy.opentrades.size(__i))
+    all_ord_avg_price := all_ord_price_sum / all_ord_qty_sum
+    
+plot(all_ord_avg_price, "3c avg price", color = color.maroon, style = plot.style_linebr)    
+
+
+            

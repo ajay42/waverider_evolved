@@ -1,0 +1,108 @@
+{
+  "asof": "2022-09-17T00:00:00+00:00",
+  "cohort": "wave",
+  "pairs": [
+    "LUNA/USDT",
+    "RVN/USDT",
+    "INJ/USDT",
+    "SANTOS/USDT",
+    "LDO/USDT",
+    "PYR/USDT",
+    "LAZIO/USDT",
+    "ATOM/USDT",
+    "PORTO/USDT",
+    "TRB/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "LUNA/USDT",
+      "symbol": "LUNAUSDT",
+      "amplitude": 13.832517869917664,
+      "trendiness": 0.2891978752419916,
+      "median_daily": 262443880.75721702,
+      "wave_score": 9.832183092690597,
+      "period_h": 14.0
+    },
+    {
+      "pair": "RVN/USDT",
+      "symbol": "RVNUSDT",
+      "amplitude": 8.780137998397505,
+      "trendiness": 0.03648533986989722,
+      "median_daily": 103876476.624989,
+      "wave_score": 8.459791679421373,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "INJ/USDT",
+      "symbol": "INJUSDT",
+      "amplitude": 5.317852399154327,
+      "trendiness": 0.00800915331807781,
+      "median_daily": 7328157.203999999,
+      "wave_score": 5.275260903966592,
+      "period_h": 13.44
+    },
+    {
+      "pair": "SANTOS/USDT",
+      "symbol": "SANTOSUSDT",
+      "amplitude": 5.421846845700436,
+      "trendiness": 0.0842745438748914,
+      "median_daily": 14103071.76203,
+      "wave_score": 4.964923175819513,
+      "period_h": 12.923076923076923
+    },
+    {
+      "pair": "LDO/USDT",
+      "symbol": "LDOUSDT",
+      "amplitude": 5.681779145277157,
+      "trendiness": 0.1407480314960629,
+      "median_daily": 25030203.856799997,
+      "wave_score": 4.882079915184014,
+      "period_h": 12.923076923076923
+    },
+    {
+      "pair": "PYR/USDT",
+      "symbol": "PYRUSDT",
+      "amplitude": 5.137406282479477,
+      "trendiness": 0.11590296495956869,
+      "median_daily": 6864532.025130001,
+      "wave_score": 4.54196566213819,
+      "period_h": 13.44
+    },
+    {
+      "pair": "LAZIO/USDT",
+      "symbol": "LAZIOUSDT",
+      "amplitude": 5.595521055056617,
+      "trendiness": 0.20606731332595532,
+      "median_daily": 12873488.575626,
+      "wave_score": 4.442467064582285,
+      "period_h": 21.0
+    },
+    {
+      "pair": "ATOM/USDT",
+      "symbol": "ATOMUSDT",
+      "amplitude": 4.548789793913504,
+      "trendiness": 0.06119311193111946,
+      "median_daily": 82151475.96804999,
+      "wave_score": 4.270435190903421,
+      "period_h": 13.44
+    },
+    {
+      "pair": "PORTO/USDT",
+      "symbol": "PORTOUSDT",
+      "amplitude": 5.377218698970019,
+      "trendiness": 0.22016222479721892,
+      "median_daily": 11397137.136341,
+      "wave_score": 4.193358266983572,
+      "period_h": 16.8
+    },
+    {
+      "pair": "TRB/USDT",
+      "symbol": "TRBUSDT",
+      "amplitude": 4.440265744761849,
+      "trendiness": 0.0621546961325966,
+      "median_daily": 5023287.219699999,
+      "wave_score": 4.164282376648198,
+      "period_h": 16.0
+    }
+  ]
+}

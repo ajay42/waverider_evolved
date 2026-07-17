@@ -1,0 +1,39 @@
+# ---- Secrets & live state (NEVER commit) ----
+# config.json / config_backtest.json hold the FreqUI password + jwt_secret_key.
+# Blanket-ignore them everywhere, including the Code Backups snapshots which
+# captured the same secrets. (Backups still keep their code; just not the creds.)
+config.json
+config_backtest.json
+# SQLite trade DB and all its sidecar/backup variants (-shm, -wal, .bak-*)
+tradesv3.sqlite*
+*.sqlite
+*.sqlite-*
+
+# ---- Host tool venv (Optuna etc.) ----
+freqtrade/.venv-tools/
+**/.venv/
+**/venv/
+
+# ---- Bulky/reproducible artifacts ----
+freqtrade/user_data/data/
+freqtrade/user_data/data_synthetic/
+freqtrade/user_data/backtest_results/
+freqtrade/user_data/logs/
+freqtrade/user_data/optuna_studies/
+freqtrade/user_data/matrix_configs/
+freqtrade/user_data/backtest_results*/
+
+# ---- Bot <-> sidecar handoff files (runtime state, regenerated) ----
+freqtrade/user_data/pairlist.json
+freqtrade/user_data/pairlist_state.json
+
+# ---- Python noise ----
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# ---- OS noise ----
+Thumbs.db
+Desktop.ini
+.DS_Store

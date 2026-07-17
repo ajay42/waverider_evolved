@@ -1,0 +1,108 @@
+{
+  "asof": "2024-11-06T00:00:00+00:00",
+  "cohort": "volume",
+  "pairs": [
+    "BTC/USDT",
+    "ETH/USDT",
+    "SOL/USDT",
+    "DOGE/USDT",
+    "SUI/USDT",
+    "PEPE/USDT",
+    "NEIRO/USDT",
+    "BNB/USDT",
+    "WIF/USDT",
+    "XRP/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "BTC/USDT",
+      "symbol": "BTCUSDT",
+      "amplitude": 1.3537509353055903,
+      "trendiness": 0.20172830021110363,
+      "median_daily": 2033902307.0027761,
+      "wave_score": 1.0806610602172018,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "ETH/USDT",
+      "symbol": "ETHUSDT",
+      "amplitude": 1.6866756425683547,
+      "trendiness": 0.3556763775054772,
+      "median_daily": 807964220.382607,
+      "wave_score": 1.0867649599929192,
+      "period_h": 12.923076923076923
+    },
+    {
+      "pair": "SOL/USDT",
+      "symbol": "SOLUSDT",
+      "amplitude": 2.257197837412323,
+      "trendiness": 0.19609841316057658,
+      "median_daily": 486901138.20843995,
+      "wave_score": 1.8145649233062815,
+      "period_h": 16.0
+    },
+    {
+      "pair": "DOGE/USDT",
+      "symbol": "DOGEUSDT",
+      "amplitude": 3.941539389986015,
+      "trendiness": 0.04310720195070979,
+      "median_daily": 371056091.9301599,
+      "wave_score": 3.7716306555052106,
+      "period_h": 16.0
+    },
+    {
+      "pair": "SUI/USDT",
+      "symbol": "SUIUSDT",
+      "amplitude": 3.5079414452187114,
+      "trendiness": 0.062354506152311334,
+      "median_daily": 154674550.95242,
+      "wave_score": 3.2892054887908735,
+      "period_h": 16.0
+    },
+    {
+      "pair": "PEPE/USDT",
+      "symbol": "PEPEUSDT",
+      "amplitude": 3.178267394322228,
+      "trendiness": 0.220264317180617,
+      "median_daily": 152704266.35763723,
+      "wave_score": 2.478208496894424,
+      "period_h": 17.68421052631579
+    },
+    {
+      "pair": "NEIRO/USDT",
+      "symbol": "NEIROUSDT",
+      "amplitude": 4.957117960528815,
+      "trendiness": 0.262058806774254,
+      "median_daily": 140098678.77410176,
+      "wave_score": 3.6580615427534102,
+      "period_h": 16.0
+    },
+    {
+      "pair": "BNB/USDT",
+      "symbol": "BNBUSDT",
+      "amplitude": 1.3076947709815425,
+      "trendiness": 0.2961328446405867,
+      "median_daily": 121252911.9394,
+      "wave_score": 0.9204433985291579,
+      "period_h": 16.0
+    },
+    {
+      "pair": "WIF/USDT",
+      "symbol": "WIFUSDT",
+      "amplitude": 3.7135361715559223,
+      "trendiness": 0.32189349112426036,
+      "median_daily": 102236666.11693001,
+      "wave_score": 2.5181730488775664,
+      "period_h": 16.0
+    },
+    {
+      "pair": "XRP/USDT",
+      "symbol": "XRPUSDT",
+      "amplitude": 1.4629248999037638,
+      "trendiness": 0.08369408369408332,
+      "median_daily": 97415686.7577,
+      "wave_score": 1.3404867408930596,
+      "period_h": 12.444444444444445
+    }
+  ]
+}

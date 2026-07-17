@@ -1,0 +1,45 @@
+30 runs queued
+[1/30] bull_wave_pure_wr already done, skipping
+[2/30] bull_wave_wr_combo_rec already done, skipping
+[3/30] bull_wave_life_wr_first already done, skipping
+[4/30] bull_wave_life_grid_first already done, skipping
+[5/30] bull_wave_life_no_grace already done, skipping
+[6/30] bull_volume_pure_wr already done, skipping
+[7/30] bull_volume_wr_combo_rec already done, skipping
+[8/30] bull_volume_life_wr_first already done, skipping
+[9/30] bull_volume_life_grid_first already done, skipping
+[10/30] bull_volume_life_no_grace already done, skipping
+[11/30] chop_wave_pure_wr already done, skipping
+[12/30] chop_wave_wr_combo_rec already done, skipping
+[13/30] chop_wave_life_wr_first already done, skipping
+[14/30] chop_wave_life_grid_first already done, skipping
+[15/30] chop_wave_life_no_grace already done, skipping
+[16/30] chop_volume_pure_wr already done, skipping
+[17/30] chop_volume_wr_combo_rec already done, skipping
+[18/30] chop_volume_life_wr_first already done, skipping
+[19/30] chop_volume_life_grid_first ...
+    ok (1740s) | Total profit %                         | 0.44%                                     |
+[20/30] chop_volume_life_no_grace ...
+    ok (1734s) | Total profit %                         | 0.27%                                     |
+[21/30] bear_wave_pure_wr ...
+    ok (1824s) | Total profit %                         | 2.85%                                     |
+[22/30] bear_wave_wr_combo_rec ...
+    ok (2321s) | Total profit %                         | 2.65%                                     |
+[23/30] bear_wave_life_wr_first ...
+    ok (3031s) | Total profit %                         | 3.69%                                     |
+[24/30] bear_wave_life_grid_first ...
+    ok (3092s) | Total profit %                         | 4.09%                                     |
+[25/30] bear_wave_life_no_grace ...
+    ok (2998s) | Total profit %                         | 3.10%                                     |
+[26/30] bear_volume_pure_wr ...
+    ok (772s) | Total profit %                         | -0.12%                                    |
+[27/30] bear_volume_wr_combo_rec ...
+    ok (1157s) | Total profit %                         | -0.45%                                    |
+[28/30] bear_volume_life_wr_first ...
+    ok (1637s) | Total profit %                         | 0.28%                                     |
+[29/30] bear_volume_life_grid_first ...
+    ok (1647s) | Total profit %                         | 0.64%                                     |
+[30/30] bear_volume_life_no_grace ...
+    ok (1511s) | Total profit %                         | -0.15%                                    |
+
+done: 30 ok, 0 failed

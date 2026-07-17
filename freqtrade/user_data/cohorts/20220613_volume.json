@@ -1,0 +1,108 @@
+{
+  "asof": "2022-06-13T00:00:00+00:00",
+  "cohort": "volume",
+  "pairs": [
+    "BTC/USDT",
+    "ETH/USDT",
+    "BNB/USDT",
+    "ADA/USDT",
+    "SOL/USDT",
+    "XRP/USDT",
+    "GMT/USDT",
+    "AVAX/USDT",
+    "LINK/USDT",
+    "TRX/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "BTC/USDT",
+      "symbol": "BTCUSDT",
+      "amplitude": 2.2625363781953194,
+      "trendiness": 0.35597023730232724,
+      "median_daily": 2149499896.9349375,
+      "wave_score": 1.4571407667439835,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "ETH/USDT",
+      "symbol": "ETHUSDT",
+      "amplitude": 3.1315687046212317,
+      "trendiness": 0.43032926083707757,
+      "median_daily": 1696874614.3843482,
+      "wave_score": 1.7839630587010527,
+      "period_h": 17.68421052631579
+    },
+    {
+      "pair": "BNB/USDT",
+      "symbol": "BNBUSDT",
+      "amplitude": 2.6890008118981905,
+      "trendiness": 0.356900067980965,
+      "median_daily": 215061279.49010003,
+      "wave_score": 1.729296239330856,
+      "period_h": 16.0
+    },
+    {
+      "pair": "ADA/USDT",
+      "symbol": "ADAUSDT",
+      "amplitude": 4.683946465619712,
+      "trendiness": 0.24529750479846457,
+      "median_daily": 205352604.40458,
+      "wave_score": 3.53498608499361,
+      "period_h": 17.68421052631579
+    },
+    {
+      "pair": "SOL/USDT",
+      "symbol": "SOLUSDT",
+      "amplitude": 4.847549618405431,
+      "trendiness": 0.3203214695752011,
+      "median_daily": 185342283.84840003,
+      "wave_score": 3.2947754007990984,
+      "period_h": 17.68421052631579
+    },
+    {
+      "pair": "XRP/USDT",
+      "symbol": "XRPUSDT",
+      "amplitude": 2.548411494916176,
+      "trendiness": 0.29791459781529267,
+      "median_daily": 124317447.9689,
+      "wave_score": 1.7892025093403547,
+      "period_h": 17.68421052631579
+    },
+    {
+      "pair": "GMT/USDT",
+      "symbol": "GMTUSDT",
+      "amplitude": 5.284922619525143,
+      "trendiness": 0.3609748620478235,
+      "median_daily": 115508488.61047399,
+      "wave_score": 3.377198406008633,
+      "period_h": 19.764705882352942
+    },
+    {
+      "pair": "AVAX/USDT",
+      "symbol": "AVAXUSDT",
+      "amplitude": 4.946294595427597,
+      "trendiness": 0.4159132007233271,
+      "median_daily": 95645982.68224901,
+      "wave_score": 2.889065378522811,
+      "period_h": 17.68421052631579
+    },
+    {
+      "pair": "LINK/USDT",
+      "symbol": "LINKUSDT",
+      "amplitude": 5.342753005738293,
+      "trendiness": 0.18901098901098906,
+      "median_daily": 94007882.79190001,
+      "wave_score": 4.3329139760822635,
+      "period_h": 15.272727272727273
+    },
+    {
+      "pair": "TRX/USDT",
+      "symbol": "TRXUSDT",
+      "amplitude": 2.0165611449975547,
+      "trendiness": 0.19778085991678235,
+      "median_daily": 74972936.400609,
+      "wave_score": 1.6177239476651673,
+      "period_h": 16.0
+    }
+  ]
+}

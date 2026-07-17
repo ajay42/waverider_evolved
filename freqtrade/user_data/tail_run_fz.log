@@ -1,0 +1,47 @@
+36 tail runs queued
+[1/36] crash2021_no_governors already done, skipping
+[2/36] crash2021_all_m15 already done, skipping
+[3/36] crash2021_all_m20 already done, skipping
+[4/36] crash2021_all_m25 already done, skipping
+[5/36] crash2021_brake_only_m15 already done, skipping
+[6/36] crash2021_freeze_agg_only already done, skipping
+[7/36] crash2021_all_m15_v105 already done, skipping
+[8/36] crash2021_all_m15_fixed ...
+    ok (410s) | Total profit %                         | -2.88%                                    |
+[9/36] crash2021_freeze_agg_fixed ...
+    ok (3238s) | Total profit %                         | -3.14%                                    |
+[10/36] bear2022a_no_governors already done, skipping
+[11/36] bear2022a_all_m15 already done, skipping
+[12/36] bear2022a_all_m20 already done, skipping
+[13/36] bear2022a_all_m25 already done, skipping
+[14/36] bear2022a_brake_only_m15 already done, skipping
+[15/36] bear2022a_freeze_agg_only already done, skipping
+[16/36] bear2022a_all_m15_v105 already done, skipping
+[17/36] bear2022a_all_m15_fixed ...
+    ok (358s) | Total profit %                         | -2.95%                                    |
+[18/36] bear2022a_freeze_agg_fixed ...
+    ok (2849s) | Total profit %                         | -8.13%                                    |
+[19/36] bear2022b_no_governors already done, skipping
+[20/36] bear2022b_all_m15 already done, skipping
+[21/36] bear2022b_all_m20 already done, skipping
+[22/36] bear2022b_all_m25 already done, skipping
+[23/36] bear2022b_brake_only_m15 already done, skipping
+[24/36] bear2022b_freeze_agg_only already done, skipping
+[25/36] bear2022b_all_m15_v105 already done, skipping
+[26/36] bear2022b_all_m15_fixed ...
+    ok (793s) | Total profit %                         | -0.13%                                    |
+[27/36] bear2022b_freeze_agg_fixed ...
+    ok (3243s) | Total profit %                         | 2.68%                                     |
+[28/36] ftxchop_no_governors already done, skipping
+[29/36] ftxchop_all_m15 already done, skipping
+[30/36] ftxchop_all_m20 already done, skipping
+[31/36] ftxchop_all_m25 already done, skipping
+[32/36] ftxchop_brake_only_m15 already done, skipping
+[33/36] ftxchop_freeze_agg_only already done, skipping
+[34/36] ftxchop_all_m15_v105 already done, skipping
+[35/36] ftxchop_all_m15_fixed ...
+    ok (674s) | Total profit %                         | 0.09%                                     |
+[36/36] ftxchop_freeze_agg_fixed ...
+    ok (2932s) | Total profit %                         | 0.74%                                     |
+
+done: 36 ok, 0 failed

@@ -1,0 +1,58 @@
+{
+  "asof": "2026-06-02T00:00:00+00:00",
+  "cohort": "wave5",
+  "pairs": [
+    "ALLO/USDT",
+    "HEI/USDT",
+    "WLD/USDT",
+    "XLM/USDT",
+    "NEAR/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "ALLO/USDT",
+      "symbol": "ALLOUSDT",
+      "amplitude": 14.244659855241693,
+      "trendiness": 0.14585350112939657,
+      "median_daily": 39619816.74734,
+      "wave_score": 12.167026342957328,
+      "period_h": 16.0
+    },
+    {
+      "pair": "HEI/USDT",
+      "symbol": "HEIUSDT",
+      "amplitude": 11.566139676531305,
+      "trendiness": 0.0841750841750842,
+      "median_daily": 5003252.76324,
+      "wave_score": 10.5925588956785,
+      "period_h": 18.666666666666668
+    },
+    {
+      "pair": "WLD/USDT",
+      "symbol": "WLDUSDT",
+      "amplitude": 6.942615329892476,
+      "trendiness": 0.1939915735482688,
+      "median_daily": 54936087.33161999,
+      "wave_score": 5.595806457506301,
+      "period_h": 18.666666666666668
+    },
+    {
+      "pair": "XLM/USDT",
+      "symbol": "XLMUSDT",
+      "amplitude": 7.070922595170305,
+      "trendiness": 0.26228602981778015,
+      "median_daily": 140764083.33179998,
+      "wave_score": 5.2163183805342515,
+      "period_h": 15.272727272727273
+    },
+    {
+      "pair": "NEAR/USDT",
+      "symbol": "NEARUSDT",
+      "amplitude": 5.199813678174025,
+      "trendiness": 0.033294163728946315,
+      "median_daily": 141764493.7536,
+      "wave_score": 5.026690230212885,
+      "period_h": 16.0
+    }
+  ]
+}

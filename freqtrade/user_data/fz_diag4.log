@@ -1,0 +1,422 @@
+ Container freqtrade-pairlist Running 
+ Container freqtrade Running 
+ Container freqtrade-freqtrade-run-8d1e3e9cab13 Creating 
+ Container freqtrade-freqtrade-run-8d1e3e9cab13 Created 
+2026-07-16 05:28:13,447 - freqtrade - INFO - freqtrade 2026.6
+2026-07-16 05:28:13,813 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2026-07-16 05:28:16,049 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/matrix_configs/crash2021_freeze_agg_fixed.json ...
+2026-07-16 05:28:16,056 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-07-16 05:28:16,057 - freqtrade.loggers - INFO - Logfile configured
+2026-07-16 05:28:16,057 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-07-16 05:28:16,058 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 10 ...
+2026-07-16 05:28:16,058 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20210514-20210522 ...
+2026-07-16 05:28:16,438 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-07-16 05:28:16,440 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-07-16 05:28:16,440 - freqtrade.configuration.configuration - INFO - Parameter --cache=none detected ...
+2026-07-16 05:28:16,441 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20210514-20210522
+2026-07-16 05:28:16,442 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-07-16 05:28:16,449 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-07-16 05:28:16,449 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-07-16 05:28:16,450 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 05:28:16,452 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2026-07-16 05:28:16,452 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-07-16 05:28:16,452 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.61
+2026-07-16 05:28:16,465 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-07-16 05:28:18,146 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-07-16 05:28:18,177 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy WaveRiderDCA from '/freqtrade/user_data/strategies/WaveRiderDCA.py'...
+2026-07-16 05:28:18,179 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-07-16 05:28:18,180 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 5m.
+2026-07-16 05:28:18,181 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_types' with value from the configuration: {'entry': 'market', 'exit': 'market', 'emergency_exit': 
+'market', 'force_entry': 'market', 'force_exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}.
+2026-07-16 05:28:18,181 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-07-16 05:28:18,182 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 200.
+2026-07-16 05:28:18,182 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 
+'unit': 'minutes'}.
+2026-07-16 05:28:18,182 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 10.
+2026-07-16 05:28:18,183 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 100}
+2026-07-16 05:28:18,183 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2026-07-16 05:28:18,184 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.99
+2026-07-16 05:28:18,184 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-07-16 05:28:18,184 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-07-16 05:28:18,185 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-07-16 05:28:18,185 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-07-16 05:28:18,185 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-07-16 05:28:18,186 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'market', 'exit': 'market', 'emergency_exit': 'market', 'force_entry': 'market', 
+'force_exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2026-07-16 05:28:18,186 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-07-16 05:28:18,186 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-07-16 05:28:18,187 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 200
+2026-07-16 05:28:18,187 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 2016
+2026-07-16 05:28:18,187 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2026-07-16 05:28:18,188 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: False
+2026-07-16 05:28:18,188 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-07-16 05:28:18,188 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-07-16 05:28:18,189 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-07-16 05:28:18,189 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-07-16 05:28:18,190 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-07-16 05:28:18,190 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: True
+2026-07-16 05:28:18,191 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-07-16 05:28:18,192 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 10
+2026-07-16 05:28:18,192 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 05:28:18,197 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-07-16 05:28:18,247 - freqtrade.optimize.backtesting - INFO - Using fee 0.1000% - worst case fee from exchange (lowest tier).
+2026-07-16 05:28:18,248 - freqtrade.exchange.exchange - WARNING - Using 3 calls to get OHLCV. This can result in slower operations for the bot. Please check if you really need 2016 candles for your 
+strategy.
+2026-07-16 05:28:18,617 - freqtrade.optimize.backtesting - INFO - Loading data from 2021-05-07 00:00:00 up to 2021-05-22 00:00:00 (15 days).
+2026-07-16 05:28:19,038 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-07-16 05:28:19,044 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy WaveRiderDCA
+2026-07-16 05:28:19,046 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT 5m from 2021-05-07 00:00:00 to 2021-05-22 00:00:00
+2026-07-16 05:28:19,274 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2021-05-14 00:00:00 up to 2021-05-22 00:00:00 (8 days).
+2026-07-16 05:28:19,382 - WaveRiderDCA - INFO - FZDBG columns missing ref_change_24h; ref-like cols: ['btc_usdt_date_5m', 'btc_usdt_open_5m', 'btc_usdt_high_5m', 'btc_usdt_low_5m', 
+'btc_usdt_close_5m', 'btc_usdt_volume_5m', 'btc_usdt_ref_5m']
+2026-07-16 05:28:19,401 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:19,415 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:19,425 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:19,436 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:19,449 - WaveRiderDCA - INFO - TRB/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:19,460 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:19,470 - WaveRiderDCA - INFO - QTUM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:19,483 - WaveRiderDCA - INFO - LSK/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:19,494 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:19,505 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:19,580 - WaveRiderDCA - INFO - TRB/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:19,591 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:19,627 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:19,806 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:19,863 - WaveRiderDCA - INFO - QTUM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:19,893 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:19,904 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:19,936 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:19,992 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:20,096 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:20,158 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:20,190 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:20,223 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:20,439 - WaveRiderDCA - INFO - TRB/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:20,499 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:20,558 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:20,792 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:20,825 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:20,858 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:20,937 - WaveRiderDCA - INFO - TRB/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:20,995 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:21,054 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:21,089 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:21,124 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:21,361 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:21,423 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:21,573 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:21,653 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:21,668 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:21,736 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:21,885 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:22,036 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:22,077 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:22,127 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:22,216 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:22,254 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:22,392 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:22,405 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:22,523 - WaveRiderDCA - INFO - QTUM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:22,567 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:22,578 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:22,613 - WaveRiderDCA - INFO - TRB/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:22,707 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:22,722 - WaveRiderDCA - INFO - LSK/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:22,820 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:22,833 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:22,845 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:22,895 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:22,926 - WaveRiderDCA - INFO - QTUM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:22,979 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:23,016 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:23,176 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:23,192 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:23,203 - WaveRiderDCA - INFO - TRB/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:23,263 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:23,407 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:23,558 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:23,600 - WaveRiderDCA - INFO - QTUM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:23,640 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:23,769 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:23,781 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:23,981 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:23,996 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:24,007 - WaveRiderDCA - INFO - LSK/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:24,044 - WaveRiderDCA - INFO - QTUM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:24,136 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:24,312 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:24,560 - WaveRiderDCA - INFO - TRB/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:24,799 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:24,840 - WaveRiderDCA - INFO - LSK/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:24,854 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:25,072 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:25,254 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:25,287 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:25,301 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:25,312 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:25,410 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:25,449 - WaveRiderDCA - INFO - TRB/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:25,696 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:25,736 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:26,289 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:26,417 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:26,461 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:26,549 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:26,630 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:26,760 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 18.7h)
+2026-07-16 05:28:28,207 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:28,434 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:28,446 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:28,675 - WaveRiderDCA - INFO - LSK/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:28,722 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:28,890 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:28,907 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:28,920 - WaveRiderDCA - INFO - LSK/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:29,260 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:29,391 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:39,461 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:41,868 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:41,937 - WaveRiderDCA - INFO - QTUM/USDT: lifecycle phase grace -> grid (deal age 3.0 waves, wave period 14.6h)
+2026-07-16 05:28:42,080 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:42,512 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:42,554 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:43,248 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:45,299 - WaveRiderDCA - INFO - TRB/USDT: lifecycle phase grace -> grid (deal age 3.0 waves, wave period 16.0h)
+2026-07-16 05:28:47,054 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:47,279 - WaveRiderDCA - INFO - LSK/USDT: lifecycle phase grace -> grid (deal age 3.0 waves, wave period 14.6h)
+2026-07-16 05:28:47,620 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase grace -> grid (deal age 3.0 waves, wave period 14.6h)
+2026-07-16 05:28:48,299 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:48,533 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:48,707 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:48,897 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:49,832 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:50,141 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase grace -> grid (deal age 3.0 waves, wave period 18.7h)
+2026-07-16 05:28:52,008 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:52,256 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:52,299 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:52,478 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:52,524 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:52,673 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:53,021 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:53,403 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:54,251 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:54,358 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:54,372 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:54,385 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:54,529 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:54,542 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:54,966 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:55,404 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:56,678 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:28:57,534 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:57,681 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:57,793 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:58,252 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:28:59,875 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:28:59,995 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:29:00,098 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:00,414 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:00,570 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:01,268 - WaveRiderDCA - INFO - QTUM/USDT: lifecycle phase grid -> wr (deal age 6.0 waves, wave period 14.6h)
+2026-07-16 05:29:01,374 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:01,909 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:02,634 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:02,648 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:02,879 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:29:03,641 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:03,755 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:04,265 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:04,467 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:05,259 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:05,443 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:05,490 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 17.7h)
+2026-07-16 05:29:07,112 - WaveRiderDCA - INFO - TRB/USDT: lifecycle phase grid -> wr (deal age 6.0 waves, wave period 16.0h)
+2026-07-16 05:29:07,225 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:07,422 - WaveRiderDCA - INFO - LSK/USDT: lifecycle phase grid -> wr (deal age 6.0 waves, wave period 14.6h)
+2026-07-16 05:29:07,467 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:08,029 - WaveRiderDCA - INFO - ETC/USDT: lifecycle phase grid -> wr (deal age 6.0 waves, wave period 14.6h)
+2026-07-16 05:29:08,069 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:08,550 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:18,398 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:19,432 - WaveRiderDCA - INFO - RLC/USDT: lifecycle phase grid -> wr (deal age 6.0 waves, wave period 18.7h)
+2026-07-16 05:29:22,373 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:22,566 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:22,667 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:23,115 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:23,131 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:23,237 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:23,665 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:26,924 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:28,812 - WaveRiderDCA - INFO - CTSI/USDT: lifecycle phase grace -> grid (deal age 3.0 waves, wave period 16.0h)
+2026-07-16 05:29:29,352 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:29,675 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:30,279 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:30,453 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:30,614 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:31,356 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:31,518 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:32,221 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:32,247 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:32,265 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:32,485 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:32,499 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:32,559 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:32,689 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:34,069 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:34,641 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:35,201 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:35,618 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:35,632 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:35,743 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:35,759 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:35,870 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:35,886 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:36,349 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:36,833 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:37,285 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:37,353 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:38,786 - WaveRiderDCA - INFO - TLM/USDT: lifecycle phase grace -> grid (deal age 3.0 waves, wave period 17.7h)
+2026-07-16 05:29:39,245 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:39,402 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:39,909 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:41,718 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:41,880 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:42,605 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:43,288 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:43,305 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:43,744 - WaveRiderDCA - INFO - TKO/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 16.0h)
+2026-07-16 05:29:43,810 - WaveRiderDCA - INFO - STRAX/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:44,046 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+2026-07-16 05:29:56,192 - WaveRiderDCA - INFO - QTUM/USDT: lifecycle phase wr -> decision (deal age 12.0 waves, wave period 14.6h)
+2026-07-16 05:29:58,517 - WaveRiderDCA - INFO - DOGE/USDT: lifecycle phase started as grace (deal age 0.0 waves, wave period 14.6h)
+backtest ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4/4       100% • 0:00:01 • 0:00:00
+backtest ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2304/2304 100% • 0:01:41 • 0:00:00
+2026-07-16 05:30:00,070 - freqtrade.misc - INFO - dumping json to "/freqtrade/user_data/backtest_results/backtest-result-2026-07-16_05-30-00.meta.json"
+Result for strategy WaveRiderDCA
+                                               BACKTESTING REPORT                                                
+┏━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃       Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃   Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│  DOGE/USDT │     38 │         2.63 │          46.281 │         0.46 │        4:58:00 │   38     0     0   100 │
+│   TKO/USDT │     31 │          2.5 │          45.507 │         0.46 │        6:07:00 │   31     0     0   100 │
+│ STRAX/USDT │     33 │         2.48 │          26.015 │         0.26 │        5:44:00 │   32     0     1  97.0 │
+│  CTSI/USDT │     32 │         2.68 │           3.071 │         0.03 │        5:55:00 │   31     0     1  96.9 │
+│   RLC/USDT │     22 │         1.94 │         -54.212 │        -0.54 │        8:39:00 │   21     0     1  95.5 │
+│   LSK/USDT │      6 │        -1.17 │         -61.429 │        -0.61 │ 1 day, 7:55:00 │    5     0     1  83.3 │
+│   ETC/USDT │     15 │         0.71 │         -73.645 │        -0.74 │       12:43:00 │   14     0     1  93.3 │
+│   TLM/USDT │     17 │         0.86 │         -77.525 │        -0.78 │       11:13:00 │   16     0     1  94.1 │
+│  QTUM/USDT │      6 │        -3.01 │         -93.360 │        -0.93 │ 1 day, 7:55:00 │    5     0     1  83.3 │
+│   TRB/USDT │      8 │        -1.11 │         -93.948 │        -0.94 │       23:55:00 │    7     0     1  87.5 │
+│      TOTAL │    208 │         1.82 │        -333.245 │        -3.33 │        9:09:00 │  200     0     8  96.2 │
+└────────────┴────────┴──────────────┴─────────────────┴──────────────┴────────────────┴────────────────────────┘
+                                              LEFT OPEN TRADES REPORT                                              
+┏━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃       Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃     Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   TKO/USDT │      1 │         0.14 │           0.455 │          0.0 │         23:15:00 │    1     0     0   100 │
+│  DOGE/USDT │      1 │         0.23 │           0.023 │          0.0 │          1:20:00 │    1     0     0   100 │
+│ STRAX/USDT │      1 │        -2.28 │          -7.100 │        -0.07 │         23:10:00 │    0     0     1     0 │
+│  CTSI/USDT │      1 │       -10.19 │         -32.716 │        -0.33 │ 3 days, 22:10:00 │    0     0     1     0 │
+│   LSK/USDT │      1 │       -17.71 │         -63.994 │        -0.64 │ 6 days, 23:45:00 │    0     0     1     0 │
+│   RLC/USDT │      1 │       -18.47 │         -66.259 │        -0.66 │  7 days, 5:10:00 │    0     0     1     0 │
+│   ETC/USDT │      1 │       -24.91 │         -79.553 │         -0.8 │ 6 days, 22:55:00 │    0     0     1     0 │
+│  QTUM/USDT │      1 │       -30.38 │         -95.058 │        -0.95 │ 7 days, 12:05:00 │    0     0     1     0 │
+│   TLM/USDT │      1 │        -29.5 │         -95.987 │        -0.96 │ 3 days, 12:00:00 │    0     0     1     0 │
+│   TRB/USDT │      1 │       -25.17 │         -96.755 │        -0.97 │  7 days, 8:30:00 │    0     0     1     0 │
+│      TOTAL │     10 │       -15.82 │        -536.943 │        -5.37 │ 4 days, 13:02:00 │    2     0     8  20.0 │
+└────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────────┴────────────────────────┘
+                                                ENTER TAG STATS                                                
+┏━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃ Entries ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     OTHER │     208 │         1.82 │        -333.245 │        -3.33 │      9:09:00 │  200     0     8  96.2 │
+│     TOTAL │     208 │         1.82 │        -333.245 │        -3.33 │      9:09:00 │  200     0     8  96.2 │
+└───────────┴─────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                   EXIT REASON STATS                                                    
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃      Exit Reason ┃ Exits ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃     Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ grace_full_close │   198 │         2.71 │         203.698 │         2.04 │          4:06:00 │  198     0     0   100 │
+│       force_exit │    10 │       -15.82 │        -536.943 │        -5.37 │ 4 days, 13:02:00 │    2     0     8  20.0 │
+│            TOTAL │   208 │         1.82 │        -333.245 │        -3.33 │          9:09:00 │  200     0     8  96.2 │
+└──────────────────┴───────┴──────────────┴─────────────────┴──────────────┴──────────────────┴────────────────────────┘
+                                                           MIXED TAG STATS                                                           
+┏━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃      Exit Reason ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃     Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│           │ grace_full_close │    198 │         2.71 │         203.698 │         2.04 │          4:06:00 │  198     0     0   100 │
+│           │       force_exit │     10 │       -15.82 │        -536.943 │        -5.37 │ 4 days, 13:02:00 │    2     0     8  20.0 │
+│     TOTAL │                  │    208 │         1.82 │        -333.245 │        -3.33 │          9:09:00 │  200     0     8  96.2 │
+└───────────┴──────────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────────┴────────────────────────┘
+                                   SUMMARY METRICS                                    
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                                 ┃ Value                                     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Backtesting from                       │ 2021-05-14 00:00:00                       │
+│ Backtesting to                         │ 2021-05-22 00:00:00                       │
+│ Trading Mode                           │ Spot                                      │
+│ Max open trades                        │ 10                                        │
+│                                        │                                           │
+│ Total/Daily Avg Trades                 │ 208 / 26.0                                │
+│ Starting balance                       │ 10000 USDT                                │
+│ Final balance                          │ 9666.755 USDT                             │
+│ Absolute profit                        │ -333.245 USDT                             │
+│ Total profit %                         │ -3.33%                                    │
+│ CAGR %                                 │ -78.70%                                   │
+│ Sharpe (closed trades)                 │ -54.88                                    │
+│ Sortino (closed trades)                │ -26.09                                    │
+│ Calmar (closed trades)                 │ -151.11                                   │
+│ SQN                                    │ -1.59                                     │
+│ Mean profit p-value                    │ 0.1135                                    │
+│ Profit factor                          │ 0.38                                      │
+│ Expectancy (Ratio)                     │ -1.60 (-0.02)                             │
+│ Avg. daily profit                      │ -41.656 USDT                              │
+│ Avg. stake amount                      │ 47.004 USDT                               │
+│ Market change                          │ -34.75%                                   │
+│ Total trade volume                     │ 20620.277 USDT                            │
+│                                        │                                           │
+│ Best Pair                              │ DOGE/USDT 0.46%                           │
+│ Worst Pair                             │ TRB/USDT -0.94%                           │
+│ Best trade                             │ DOGE/USDT 9.95%                           │
+│ Worst trade                            │ QTUM/USDT -30.38%                         │
+│ Best day                               │ 50.729 USDT                               │
+│ Worst day                              │ -536.943 USDT                             │
+│ Days win/draw/lose                     │ 8 / 0 / 1                                 │
+│ Min/Max/Avg. Duration Winners          │ 0d 00:05 / 1d 19:25 / 0d 04:11            │
+│ Min/Max/Avg. Duration Losers           │ 0d 23:10 / 7d 12:05 / 5d 13:13            │
+│ Max Consecutive Wins / Loss            │ 198 / 7                                   │
+│ Rejected Entry signals                 │ 0                                         │
+│ Entry/Exit Timeouts                    │ 0 / 0                                     │
+│                                        │                                           │
+│ Min/Max balance (closed trades)        │ 9666.3 USDT / 10203.698 USDT              │
+│ Max % of account underwater            │ 5.27%                                     │
+│ Absolute drawdown                      │ 537.398 USDT (5.27%)                      │
+│ Drawdown duration                      │ 0 days 01:25:00                           │
+│ Profit at drawdown start               │ 203.698 USDT                              │
+│ Profit at drawdown end                 │ -333.7 USDT                               │
+│ Drawdown start                         │ 2021-05-21 22:35:00                       │
+│ Drawdown end                           │ 2021-05-22 00:00:00                       │
+│                                        │                                           │
+│ Wallet based Metrics                   │                                           │
+│ Min/Max balance (wallet balance)       │ 8853.9 USDT / 10058.97 USDT               │
+│ Min/Max balance dates (wallet balance) │ 2021-05-19 13:10:00 / 2021-05-18 05:05:00 │
+│ Max % of account underwater (balance)  │ 11.98%                                    │
+│ Absolute drawdown (wallet balance)     │ 1205.071 USDT (11.98%)                    │
+│ Drawdown duration                      │ 1 days 08:05:00                           │
+│ Profit at drawdown start               │ 58.97 USDT                                │
+│ Profit at drawdown end                 │ -1146.1 USDT                              │
+│ Drawdown start                         │ 2021-05-18 05:05:00                       │
+│ Drawdown end                           │ 2021-05-19 13:10:00                       │
+│ Sharpe (daily wallet balance)          │ -3.02                                     │
+│ Sortino (daily wallet balance)         │ -3.62                                     │
+│ Calmar (daily wallet balance)          │ -74.96                                    │
+└────────────────────────────────────────┴───────────────────────────────────────────┘
+
+Backtested 2021-05-14 00:00:00 -> 2021-05-22 00:00:00 | Max open trades : 10
+                                                           STRATEGY SUMMARY                                                            
+┏━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃     Strategy ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃            Drawdown ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ WaveRiderDCA │    208 │         1.82 │        -333.245 │        -3.33 │      9:09:00 │  200     0     8  96.2 │ 537.398 USDT  5.27% │
+└──────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┴─────────────────────┘

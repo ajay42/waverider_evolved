@@ -1,0 +1,35 @@
+Monte Carlo bootstrap - 3000 reshuffled paths per run, deal-level blocks, seed 42
+CAVEAT: reshuffling treats deals as independent; real alt-coins
+crash together, so true tails are worse than these bands.
+
+=== TAIL results ===
+run                            deals  ddP50$  ddP95$  ddP99$ ddP99% P5 final$ P(loss)
+bear2022a_all_m15                 29     296     451     513   5.1%    -450.0 100.0%
+bear2022a_all_m15_v105            29     273     416     479   4.8%    -414.8 100.0%
+bear2022a_all_m20                 29     295     450     531   5.3%    -449.0 100.0%
+bear2022a_all_m25                 29     302     462     528   5.3%    -460.8 100.0%
+bear2022a_brake_only_m15          29     293     442     517   5.2%    -440.6 100.0%
+bear2022a_freeze_agg_only         29     796    1247    1468  14.7%   -1245.5 100.0%
+bear2022a_no_governors            29     805    1247    1452  14.5%   -1244.9 100.0%
+bear2022b_all_m15                185      41      94     121   1.2%     -76.3  62.5%
+bear2022b_all_m15_v105           172      39      89     111   1.1%     -73.5  65.8%
+bear2022b_all_m20                185      41      91     119   1.2%     -74.6  61.7%
+bear2022b_all_m25                185      40      90     113   1.1%     -73.9  61.5%
+bear2022b_brake_only_m15         185      40      92     119   1.2%     -76.1  61.3%
+bear2022b_freeze_agg_only        424      16      32      41   0.4%     201.6   0.0%
+bear2022b_no_governors           424      16      32      41   0.4%     202.3   0.0%
+crash2021_all_m15                 55     289     473     557   5.6%    -470.0 100.0%
+crash2021_all_m15_v105            55     265     433     519   5.2%    -429.1 100.0%
+crash2021_all_m20                 55     303     503     590   5.9%    -500.5 100.0%
+crash2021_all_m25                 57     334     566     669   6.7%    -563.1  99.9%
+crash2021_brake_only_m15          55     287     468     559   5.6%    -463.8 100.0%
+crash2021_freeze_agg_only        200     336     674     846   8.5%    -644.3  97.0%
+crash2021_no_governors           200     340     667     825   8.2%    -648.1  96.9%
+ftxchop_all_m15                   81      14      33      47   0.5%     -19.4  26.3%
+ftxchop_all_m15_v105              79      14      34      47   0.5%     -21.6  31.5%
+ftxchop_all_m20                   81      14      35      46   0.5%     -20.5  27.2%
+ftxchop_all_m25                   81      14      35      47   0.5%     -20.8  27.0%
+ftxchop_brake_only_m15            81      14      35      47   0.5%     -21.0  27.2%
+ftxchop_freeze_agg_only          172      30      57      79   0.8%      11.2   3.0%
+ftxchop_no_governors             172      30      56      81   0.8%      12.2   2.5%
+

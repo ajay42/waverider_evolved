@@ -1,0 +1,100 @@
+ Container freqtrade-pairlist Running 
+ Container freqtrade Running 
+ Container freqtrade-freqtrade-run-73e453e8d3d3 Creating 
+ Container freqtrade-freqtrade-run-73e453e8d3d3 Created 
+2026-07-16 04:49:45,282 - freqtrade - INFO - freqtrade 2026.6
+2026-07-16 04:49:45,610 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2026-07-16 04:49:47,772 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/matrix_configs/crash2021_freeze_agg_fixed.json ...
+2026-07-16 04:49:47,777 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-07-16 04:49:47,777 - freqtrade.loggers - INFO - Logfile configured
+2026-07-16 04:49:47,778 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-07-16 04:49:47,778 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 10 ...
+2026-07-16 04:49:47,779 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20210518-20210521 ...
+2026-07-16 04:49:48,155 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-07-16 04:49:48,157 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-07-16 04:49:48,157 - freqtrade.configuration.configuration - INFO - Parameter --cache=none detected ...
+2026-07-16 04:49:48,158 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20210518-20210521
+2026-07-16 04:49:48,159 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-07-16 04:49:48,169 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-07-16 04:49:48,170 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-07-16 04:49:48,171 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 04:49:48,173 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2026-07-16 04:49:48,174 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-07-16 04:49:48,174 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.61
+2026-07-16 04:49:48,190 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-07-16 04:49:50,165 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-07-16 04:49:50,217 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy WaveRiderDCA from '/freqtrade/user_data/strategies/WaveRiderDCA.py'...
+2026-07-16 04:49:50,219 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-07-16 04:49:50,220 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 5m.
+2026-07-16 04:49:50,220 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_types' with value from the configuration: {'entry': 'market', 'exit': 'market', 'emergency_exit': 
+'market', 'force_entry': 'market', 'force_exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}.
+2026-07-16 04:49:50,221 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-07-16 04:49:50,222 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 200.
+2026-07-16 04:49:50,222 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 
+'unit': 'minutes'}.
+2026-07-16 04:49:50,223 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 10.
+2026-07-16 04:49:50,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 100}
+2026-07-16 04:49:50,224 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2026-07-16 04:49:50,224 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.99
+2026-07-16 04:49:50,224 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-07-16 04:49:50,225 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-07-16 04:49:50,225 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-07-16 04:49:50,226 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-07-16 04:49:50,226 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-07-16 04:49:50,227 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'market', 'exit': 'market', 'emergency_exit': 'market', 'force_entry': 'market', 
+'force_exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2026-07-16 04:49:50,227 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-07-16 04:49:50,228 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-07-16 04:49:50,229 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 200
+2026-07-16 04:49:50,230 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 2016
+2026-07-16 04:49:50,230 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2026-07-16 04:49:50,231 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: False
+2026-07-16 04:49:50,232 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-07-16 04:49:50,232 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-07-16 04:49:50,233 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-07-16 04:49:50,234 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-07-16 04:49:50,237 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-07-16 04:49:50,237 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: True
+2026-07-16 04:49:50,238 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-07-16 04:49:50,238 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 10
+2026-07-16 04:49:50,239 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 04:49:50,244 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-07-16 04:49:50,305 - freqtrade.optimize.backtesting - INFO - Using fee 0.1000% - worst case fee from exchange (lowest tier).
+2026-07-16 04:49:50,310 - freqtrade.exchange.exchange - WARNING - Using 3 calls to get OHLCV. This can result in slower operations for the bot. Please check if you really need 2016 candles for your 
+strategy.
+2026-07-16 04:49:50,445 - freqtrade.data.history.datahandlers.idatahandler - WARNING - DOGE/USDT, spot, 5m, data starts at 2026-05-25 00:00:00
+2026-07-16 04:49:50,447 - freqtrade.data.history.datahandlers.idatahandler - WARNING - No history for DOGE/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2026-07-16 04:49:50,843 - freqtrade.optimize.backtesting - INFO - Loading data from 2021-05-11 00:00:00 up to 2021-05-21 00:00:00 (10 days).
+2026-07-16 04:49:51,222 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-07-16 04:49:51,227 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy WaveRiderDCA
+2026-07-16 04:49:51,229 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT 5m from 2021-05-11 00:00:00 to 2021-05-21 00:00:00
+2026-07-16 04:49:51,247 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT, spot, 5m, data starts at 2026-05-25 00:00:00
+2026-07-16 04:49:51,248 - freqtrade.data.history.datahandlers.idatahandler - WARNING - No history for BTC/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2026-07-16 04:49:51,249 - freqtrade.data.dataprovider - WARNING - No data found for (BTC/USDT, 5m, spot).
+analyze ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸                                                                                  2/4  50% • 0:00:00 • 0:00:02
+analyze ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0/0   0% • 0:00:00 • 0:00:00
+2026-07-16 04:49:51,253 - freqtrade - ERROR - Fatal exception!
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/main.py", line 52, in main
+    return_code = args["func"](args)
+  File "/freqtrade/freqtrade/commands/optimize_commands.py", line 61, in start_backtesting
+    backtesting.start()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/freqtrade/freqtrade/optimize/backtesting.py", line 1913, in start
+    min_date, max_date = self.backtest_one_strategy(strat, data, timerange)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/optimize/backtesting.py", line 1820, in backtest_one_strategy
+    preprocessed = self.strategy.advise_all_indicators(data)
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1767, in advise_all_indicators
+    res[pair] = self.advise_indicators(pair_data.copy(), {"pair": pair}).copy()
+                ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1824, in advise_indicators
+    dataframe = _create_and_merge_informative_pair(
+        self, dataframe, metadata, inf_data, populate_fn
+    )
+  File "/freqtrade/freqtrade/strategy/informative_decorator.py", line 140, in _create_and_merge_informative_pair
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Informative dataframe for (BTC/USDT, 5m, spot) is empty. Can't populate informative indicators.
+

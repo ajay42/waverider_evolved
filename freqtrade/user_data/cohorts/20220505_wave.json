@@ -1,0 +1,108 @@
+{
+  "asof": "2022-05-05T00:00:00+00:00",
+  "cohort": "wave",
+  "pairs": [
+    "APE/USDT",
+    "ENS/USDT",
+    "FLUX/USDT",
+    "PYR/USDT",
+    "ASTR/USDT",
+    "MASK/USDT",
+    "CHR/USDT",
+    "SKL/USDT",
+    "UMA/USDT",
+    "PEOPLE/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "APE/USDT",
+      "symbol": "APEUSDT",
+      "amplitude": 9.211139307626265,
+      "trendiness": 0.11455712508153683,
+      "median_daily": 1073978680.617162,
+      "wave_score": 8.155937669819062,
+      "period_h": 17.68421052631579
+    },
+    {
+      "pair": "ENS/USDT",
+      "symbol": "ENSUSDT",
+      "amplitude": 8.701336177000908,
+      "trendiness": 0.09012629161882897,
+      "median_daily": 170757162.9354,
+      "wave_score": 7.917117015239057,
+      "period_h": 16.0
+    },
+    {
+      "pair": "FLUX/USDT",
+      "symbol": "FLUXUSDT",
+      "amplitude": 7.279115270594521,
+      "trendiness": 0.1191135734072022,
+      "median_daily": 12870694.19104,
+      "wave_score": 6.412073839471074,
+      "period_h": 12.444444444444445
+    },
+    {
+      "pair": "PYR/USDT",
+      "symbol": "PYRUSDT",
+      "amplitude": 6.2735132192337275,
+      "trendiness": 0.044277360066833686,
+      "median_daily": 10829288.35637,
+      "wave_score": 5.995738615541675,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "ASTR/USDT",
+      "symbol": "ASTRUSDT",
+      "amplitude": 6.18457769867529,
+      "trendiness": 0.10867052023121389,
+      "median_daily": 15771297.66592,
+      "wave_score": 5.512496422749883,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "MASK/USDT",
+      "symbol": "MASKUSDT",
+      "amplitude": 5.515256879546202,
+      "trendiness": 0.0031256511773285443,
+      "median_daily": 11973707.429799998,
+      "wave_score": 5.498018110387379,
+      "period_h": 14.0
+    },
+    {
+      "pair": "CHR/USDT",
+      "symbol": "CHRUSDT",
+      "amplitude": 5.472020466816607,
+      "trendiness": 0.0004464285714285224,
+      "median_daily": 16401126.843400002,
+      "wave_score": 5.469577600536779,
+      "period_h": 15.272727272727273
+    },
+    {
+      "pair": "SKL/USDT",
+      "symbol": "SKLUSDT",
+      "amplitude": 5.425734318083967,
+      "trendiness": 0.0010764262648008923,
+      "median_daily": 10900116.3869,
+      "wave_score": 5.419893915158149,
+      "period_h": 16.8
+    },
+    {
+      "pair": "UMA/USDT",
+      "symbol": "UMAUSDT",
+      "amplitude": 5.1687351817142115,
+      "trendiness": 0.015500945179584098,
+      "median_daily": 11376720.6449,
+      "wave_score": 5.0886149010146715,
+      "period_h": 14.0
+    },
+    {
+      "pair": "PEOPLE/USDT",
+      "symbol": "PEOPLEUSDT",
+      "amplitude": 5.30524097865612,
+      "trendiness": 0.04739336492890999,
+      "median_daily": 24566315.777329996,
+      "wave_score": 5.053807756918863,
+      "period_h": 15.272727272727273
+    }
+  ]
+}

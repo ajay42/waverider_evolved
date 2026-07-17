@@ -1,0 +1,108 @@
+{
+  "asof": "2026-03-02T00:00:00+00:00",
+  "cohort": "wave",
+  "pairs": [
+    "ESP/USDT",
+    "KITE/USDT",
+    "ENSO/USDT",
+    "FOGO/USDT",
+    "ZAMA/USDT",
+    "PUMP/USDT",
+    "VIRTUAL/USDT",
+    "ZRO/USDT",
+    "OP/USDT",
+    "WIF/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "ESP/USDT",
+      "symbol": "ESPUSDT",
+      "amplitude": 11.838107372572821,
+      "trendiness": 0.17346584196261028,
+      "median_daily": 21578596.11405,
+      "wave_score": 9.784600109945693,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "KITE/USDT",
+      "symbol": "KITEUSDT",
+      "amplitude": 6.651266301814398,
+      "trendiness": 0.025421133231240515,
+      "median_daily": 24340372.618789997,
+      "wave_score": 6.482183574999514,
+      "period_h": 15.272727272727273
+    },
+    {
+      "pair": "ENSO/USDT",
+      "symbol": "ENSOUSDT",
+      "amplitude": 8.075592658746732,
+      "trendiness": 0.20947702976018492,
+      "median_daily": 16006320.412819998,
+      "wave_score": 6.383941495039312,
+      "period_h": 25.846153846153847
+    },
+    {
+      "pair": "FOGO/USDT",
+      "symbol": "FOGOUSDT",
+      "amplitude": 5.730388697195614,
+      "trendiness": 0.034346624555862584,
+      "median_daily": 5332364.46724,
+      "wave_score": 5.533569188053877,
+      "period_h": 19.764705882352942
+    },
+    {
+      "pair": "ZAMA/USDT",
+      "symbol": "ZAMAUSDT",
+      "amplitude": 5.125712047020287,
+      "trendiness": 0.012229539040451537,
+      "median_daily": 8090731.63872,
+      "wave_score": 5.06302695143114,
+      "period_h": 22.4
+    },
+    {
+      "pair": "PUMP/USDT",
+      "symbol": "PUMPUSDT",
+      "amplitude": 4.442353284639735,
+      "trendiness": 0.027388922702373777,
+      "median_daily": 19026919.076326,
+      "wave_score": 4.3206820139101,
+      "period_h": 21.0
+    },
+    {
+      "pair": "VIRTUAL/USDT",
+      "symbol": "VIRTUALUSDT",
+      "amplitude": 4.598396923054118,
+      "trendiness": 0.16002747252747243,
+      "median_daily": 15364872.4161,
+      "wave_score": 3.862527085779661,
+      "period_h": 17.68421052631579
+    },
+    {
+      "pair": "ZRO/USDT",
+      "symbol": "ZROUSDT",
+      "amplitude": 4.7230762668983,
+      "trendiness": 0.18275418275418276,
+      "median_daily": 11569109.89947,
+      "wave_score": 3.859914323655625,
+      "period_h": 21.0
+    },
+    {
+      "pair": "OP/USDT",
+      "symbol": "OPUSDT",
+      "amplitude": 3.9726988988496235,
+      "trendiness": 0.06126687435098652,
+      "median_daily": 6827662.062605999,
+      "wave_score": 3.729304054579501,
+      "period_h": 18.666666666666668
+    },
+    {
+      "pair": "WIF/USDT",
+      "symbol": "WIFUSDT",
+      "amplitude": 3.999462494591868,
+      "trendiness": 0.08955223880597023,
+      "median_daily": 7993092.63573,
+      "wave_score": 3.641301674180656,
+      "period_h": 25.846153846153847
+    }
+  ]
+}

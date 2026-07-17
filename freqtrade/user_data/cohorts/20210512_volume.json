@@ -1,0 +1,108 @@
+{
+  "asof": "2021-05-12T00:00:00+00:00",
+  "cohort": "volume",
+  "pairs": [
+    "DOGE/USDT",
+    "BTC/USDT",
+    "ETH/USDT",
+    "ETC/USDT",
+    "BNB/USDT",
+    "XRP/USDT",
+    "ADA/USDT",
+    "LTC/USDT",
+    "BCH/USDT",
+    "DOT/USDT"
+  ],
+  "detail": [
+    {
+      "pair": "DOGE/USDT",
+      "symbol": "DOGEUSDT",
+      "amplitude": 12.046350703546828,
+      "trendiness": 0.12113779534506186,
+      "median_daily": 7747900489.935062,
+      "wave_score": 10.58708233736573,
+      "period_h": 14.608695652173912
+    },
+    {
+      "pair": "BTC/USDT",
+      "symbol": "BTCUSDT",
+      "amplitude": 2.5570945469388646,
+      "trendiness": 0.07401136522887358,
+      "median_daily": 4079553831.9880643,
+      "wave_score": 2.3678404885006112,
+      "period_h": 15.272727272727273
+    },
+    {
+      "pair": "ETH/USDT",
+      "symbol": "ETHUSDT",
+      "amplitude": 3.916320791354898,
+      "trendiness": 0.34454164424349776,
+      "median_daily": 3955994776.901158,
+      "wave_score": 2.566985186516485,
+      "period_h": 15.272727272727273
+    },
+    {
+      "pair": "ETC/USDT",
+      "symbol": "ETCUSDT",
+      "amplitude": 11.947579963973675,
+      "trendiness": 0.1416671726063991,
+      "median_daily": 2073744977.09948,
+      "wave_score": 10.255000090988661,
+      "period_h": 14.0
+    },
+    {
+      "pair": "BNB/USDT",
+      "symbol": "BNBUSDT",
+      "amplitude": 3.1276916680237123,
+      "trendiness": 0.1485495052837044,
+      "median_daily": 1454478376.495745,
+      "wave_score": 2.663074618058826,
+      "period_h": 18.666666666666668
+    },
+    {
+      "pair": "XRP/USDT",
+      "symbol": "XRPUSDT",
+      "amplitude": 5.531167218274848,
+      "trendiness": 0.03938677322025605,
+      "median_daily": 1424596624.8806932,
+      "wave_score": 5.313312389405342,
+      "period_h": 18.666666666666668
+    },
+    {
+      "pair": "ADA/USDT",
+      "symbol": "ADAUSDT",
+      "amplitude": 5.6592924216765494,
+      "trendiness": 0.28044963913904314,
+      "median_daily": 1220328155.185192,
+      "wave_score": 4.07214590423504,
+      "period_h": 12.923076923076923
+    },
+    {
+      "pair": "LTC/USDT",
+      "symbol": "LTCUSDT",
+      "amplitude": 6.047560698517985,
+      "trendiness": 0.11477820025348548,
+      "median_daily": 941466204.1639098,
+      "wave_score": 5.3534325656183785,
+      "period_h": 16.0
+    },
+    {
+      "pair": "BCH/USDT",
+      "symbol": "BCHUSDT",
+      "amplitude": 7.89894976806415,
+      "trendiness": 0.24221668087076384,
+      "median_daily": 685545869.1262366,
+      "wave_score": 5.985692372878762,
+      "period_h": 17.68421052631579
+    },
+    {
+      "pair": "DOT/USDT",
+      "symbol": "DOTUSDT",
+      "amplitude": 4.615905143161549,
+      "trendiness": 0.09167298023279835,
+      "median_daily": 558699479.800829,
+      "wave_score": 4.192751362216028,
+      "period_h": 18.666666666666668
+    }
+  ]
+}

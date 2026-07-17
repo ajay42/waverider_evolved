@@ -1,0 +1,173 @@
+ Container freqtrade-pairlist Running 
+ Container freqtrade Running 
+ Container freqtrade-freqtrade-run-e49b813b88f7 Creating 
+ Container freqtrade-freqtrade-run-e49b813b88f7 Created 
+2026-07-16 04:52:02,965 - freqtrade - INFO - freqtrade 2026.6
+2026-07-16 04:52:03,487 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2026-07-16 04:52:04,906 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config_backtest.json ...
+2026-07-16 04:52:04,913 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-07-16 04:52:04,914 - freqtrade.loggers - INFO - Logfile configured
+2026-07-16 04:52:04,914 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-07-16 04:52:04,915 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20210505-20210614 ...
+2026-07-16 04:52:05,323 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-07-16 04:52:05,326 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-07-16 04:52:05,327 - freqtrade.configuration.configuration - INFO - Using pairs ['DOGE/USDT', 'BTC/USDT']
+2026-07-16 04:52:05,327 - freqtrade.configuration.configuration - INFO - Prepend detected. Allowing data prepending.
+2026-07-16 04:52:05,328 - freqtrade.configuration.configuration - INFO - timeframes --timeframes: ['5m', '1m']
+2026-07-16 04:52:05,328 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20210505-20210614
+2026-07-16 04:52:05,330 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-07-16 04:52:05,341 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-07-16 04:52:05,342 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 04:52:06,143 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-07-16 04:52:06,143 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.61
+2026-07-16 04:52:06,160 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-07-16 04:52:06,160 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-07-16 04:52:06,161 - freqtrade.exchange.exchange - INFO - Markets were not loaded. Loading them now..
+2026-07-16 04:52:07,685 - freqtrade.data.history.history_utils - INFO - About to download pairs: ['DOGE/USDT', 'BTC/USDT'], intervals: ['5m', '1m'] to /freqtrade/user_data/data/binance
+2026-07-16 04:52:07,734 - freqtrade.data.history.history_utils - INFO - Download history data for "DOGE/USDT", 5m, spot and store in /freqtrade/user_data/data/binance. From 2021-05-05T00:00:00 to 
+2026-05-25T00:00:00
+2026-07-16 04:52:16,558 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOGE/USDT, 5m, spot with length 531554.
+2026-07-16 04:52:17,387 - freqtrade.data.history.history_utils - INFO - Download history data for "DOGE/USDT", 1m, spot and store in /freqtrade/user_data/data/binance. From 2021-05-05T00:00:00 to 
+2024-10-30T00:00:00
+2026-07-16 04:52:52,936 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOGE/USDT, 1m, spot with length 1834090.
+2026-07-16 04:52:55,361 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 5m, spot and store in /freqtrade/user_data/data/binance. From 2021-05-05T00:00:00 to 
+2026-05-25T00:00:00
+2026-07-16 04:53:04,503 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 5m, spot with length 531554.
+2026-07-16 04:53:05,394 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 1m, spot and store in /freqtrade/user_data/data/binance. From 2021-05-05T00:00:00 to 
+2024-10-30T00:00:00
+2026-07-16 04:53:36,761 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 1m, spot with length 1834090.
+Timeframe            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2/2 100% • 0:00:47 • 0:00:00
+Downloading BTC/USDT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2/2 100% • 0:01:32 • 0:00:00
+ Container freqtrade-pairlist Running 
+ Container freqtrade Running 
+ Container freqtrade-freqtrade-run-e91956503e33 Creating 
+ Container freqtrade-freqtrade-run-e91956503e33 Created 
+2026-07-16 04:53:42,669 - freqtrade - INFO - freqtrade 2026.6
+2026-07-16 04:53:43,215 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2026-07-16 04:53:44,526 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config_backtest.json ...
+2026-07-16 04:53:44,531 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-07-16 04:53:44,531 - freqtrade.loggers - INFO - Logfile configured
+2026-07-16 04:53:44,532 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-07-16 04:53:44,532 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20220428-20220606 ...
+2026-07-16 04:53:44,958 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-07-16 04:53:44,959 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-07-16 04:53:44,960 - freqtrade.configuration.configuration - INFO - Using pairs ['MASK/USDT', 'BTC/USDT']
+2026-07-16 04:53:44,960 - freqtrade.configuration.configuration - INFO - Prepend detected. Allowing data prepending.
+2026-07-16 04:53:44,961 - freqtrade.configuration.configuration - INFO - timeframes --timeframes: ['5m', '1m']
+2026-07-16 04:53:44,961 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20220428-20220606
+2026-07-16 04:53:44,962 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-07-16 04:53:44,972 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-07-16 04:53:44,973 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 04:53:45,688 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-07-16 04:53:45,689 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.61
+2026-07-16 04:53:45,704 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-07-16 04:53:45,707 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-07-16 04:53:45,708 - freqtrade.exchange.exchange - INFO - Markets were not loaded. Loading them now..
+2026-07-16 04:53:47,126 - freqtrade.data.history.history_utils - INFO - About to download pairs: ['MASK/USDT', 'BTC/USDT'], intervals: ['5m', '1m'] to /freqtrade/user_data/data/binance
+2026-07-16 04:53:47,167 - freqtrade.data.history.history_utils - INFO - Download history data for "MASK/USDT", 5m, spot and store in /freqtrade/user_data/data/binance. From 2022-04-28T00:00:00 to 
+2024-10-30T00:00:00
+2026-07-16 04:53:54,072 - freqtrade.data.history.history_utils - INFO - Downloaded data for MASK/USDT, 5m, spot with length 263792.
+2026-07-16 04:53:54,318 - freqtrade.data.history.history_utils - INFO - Download history data for "MASK/USDT", 1m, spot and store in /freqtrade/user_data/data/binance. From 2022-04-28T00:00:00 to 
+2024-10-30T00:00:00
+2026-07-16 04:54:05,168 - freqtrade.data.history.history_utils - INFO - Downloaded data for MASK/USDT, 1m, spot with length 1318959.
+2026-07-16 04:54:06,443 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 5m, spot and store in /freqtrade/user_data/data/binance. From 2022-04-28T00:00:00 to 
+2021-05-05T00:00:00
+2026-07-16 04:54:06,444 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 5m, spot with length 0.
+2026-07-16 04:54:07,998 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 1m, spot and store in /freqtrade/user_data/data/binance. From 2022-04-28T00:00:00 to 
+2021-05-05T00:00:00
+2026-07-16 04:54:07,999 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 1m, spot with length 0.
+Timeframe            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2/2 100% • 0:00:19 • 0:00:00
+Downloading BTC/USDT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2/2 100% • 0:00:23 • 0:00:00
+ Container freqtrade Running 
+ Container freqtrade-pairlist Running 
+ Container freqtrade-freqtrade-run-487a61028235 Creating 
+ Container freqtrade-freqtrade-run-487a61028235 Created 
+2026-07-16 04:54:13,215 - freqtrade - INFO - freqtrade 2026.6
+2026-07-16 04:54:13,642 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2026-07-16 04:54:14,958 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config_backtest.json ...
+2026-07-16 04:54:14,962 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-07-16 04:54:14,963 - freqtrade.loggers - INFO - Logfile configured
+2026-07-16 04:54:14,963 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-07-16 04:54:14,964 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20220606-20220713 ...
+2026-07-16 04:54:15,311 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-07-16 04:54:15,312 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-07-16 04:54:15,313 - freqtrade.configuration.configuration - INFO - Using pairs ['BTC/USDT']
+2026-07-16 04:54:15,313 - freqtrade.configuration.configuration - INFO - Prepend detected. Allowing data prepending.
+2026-07-16 04:54:15,313 - freqtrade.configuration.configuration - INFO - timeframes --timeframes: ['5m', '1m']
+2026-07-16 04:54:15,314 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20220606-20220713
+2026-07-16 04:54:15,315 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-07-16 04:54:15,322 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-07-16 04:54:15,322 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 04:54:16,002 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-07-16 04:54:16,003 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.61
+2026-07-16 04:54:16,019 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-07-16 04:54:16,019 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-07-16 04:54:16,020 - freqtrade.exchange.exchange - INFO - Markets were not loaded. Loading them now..
+2026-07-16 04:54:17,305 - freqtrade.data.history.history_utils - INFO - About to download pairs: ['BTC/USDT'], intervals: ['5m', '1m'] to /freqtrade/user_data/data/binance
+2026-07-16 04:54:17,531 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 5m, spot and store in /freqtrade/user_data/data/binance. From 2022-06-06T00:00:00 to 
+2021-05-05T00:00:00
+2026-07-16 04:54:17,532 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 5m, spot with length 0.
+2026-07-16 04:54:19,063 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 1m, spot and store in /freqtrade/user_data/data/binance. From 2022-06-06T00:00:00 to 
+2021-05-05T00:00:00
+2026-07-16 04:54:19,064 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 1m, spot with length 0.
+Timeframe            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2/2 100% • 0:00:04 • 0:00:00
+Downloading BTC/USDT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1/1 100% • 0:00:04 • 0:00:00
+ Container freqtrade-pairlist Running 
+ Container freqtrade Running 
+ Container freqtrade-freqtrade-run-a5a447854490 Creating 
+ Container freqtrade-freqtrade-run-a5a447854490 Created 
+2026-07-16 04:54:23,875 - freqtrade - INFO - freqtrade 2026.6
+2026-07-16 04:54:24,280 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2026-07-16 04:54:25,657 - freqtrade.configuration.load_config - INFO - Using config: /freqtrade/user_data/config_backtest.json ...
+2026-07-16 04:54:25,664 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-07-16 04:54:25,665 - freqtrade.loggers - INFO - Logfile configured
+2026-07-16 04:54:25,665 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-07-16 04:54:25,666 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20220910-20221109 ...
+2026-07-16 04:54:26,103 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-07-16 04:54:26,105 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-07-16 04:54:26,105 - freqtrade.configuration.configuration - INFO - Using pairs ['INJ/USDT', 'SANTOS/USDT', 'LAZIO/USDT', 'PORTO/USDT', 'BTC/USDT']
+2026-07-16 04:54:26,105 - freqtrade.configuration.configuration - INFO - Prepend detected. Allowing data prepending.
+2026-07-16 04:54:26,106 - freqtrade.configuration.configuration - INFO - timeframes --timeframes: ['5m', '1m']
+2026-07-16 04:54:26,106 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20220910-20221109
+2026-07-16 04:54:26,107 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-07-16 04:54:26,115 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-07-16 04:54:26,115 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 04:54:26,850 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-07-16 04:54:26,850 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.61
+2026-07-16 04:54:26,874 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-07-16 04:54:26,874 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-07-16 04:54:26,876 - freqtrade.exchange.exchange - INFO - Markets were not loaded. Loading them now..
+2026-07-16 04:54:28,326 - freqtrade.data.history.history_utils - INFO - About to download pairs: ['INJ/USDT', 'SANTOS/USDT', 'LAZIO/USDT', 'PORTO/USDT', 'BTC/USDT'], intervals: ['5m', '1m'] to 
+/freqtrade/user_data/data/binance
+2026-07-16 04:54:28,372 - freqtrade.data.history.history_utils - INFO - Download history data for "INJ/USDT", 5m, spot and store in /freqtrade/user_data/data/binance. From 2022-09-10T00:00:00 to 
+2026-05-26T00:00:00
+2026-07-16 04:54:35,198 - freqtrade.data.history.history_utils - INFO - Downloaded data for INJ/USDT, 5m, spot with length 389936.
+2026-07-16 04:54:35,562 - freqtrade.data.history.history_utils - INFO - Download history data for "INJ/USDT", 1m, spot and store in /freqtrade/user_data/data/binance. From 2022-09-10T00:00:00 to 
+2026-05-26T00:00:00
+2026-07-16 04:55:15,523 - freqtrade.data.history.history_utils - INFO - Downloaded data for INJ/USDT, 1m, spot with length 1949679.
+2026-07-16 04:55:17,462 - freqtrade.data.history.history_utils - INFO - Download history data for "SANTOS/USDT", 5m, spot and store in /freqtrade/user_data/data/binance. From 2022-09-10T00:00:00 to 
+2024-10-30T00:00:00
+2026-07-16 04:55:21,673 - freqtrade.data.history.history_utils - INFO - Downloaded data for SANTOS/USDT, 5m, spot with length 224912.
+2026-07-16 04:55:21,883 - freqtrade.data.history.history_utils - INFO - Download history data for "SANTOS/USDT", 1m, spot and store in /freqtrade/user_data/data/binance. From 2022-09-10T00:00:00 to 
+2024-10-30T00:00:00
+2026-07-16 04:55:31,450 - freqtrade.data.history.history_utils - INFO - Downloaded data for SANTOS/USDT, 1m, spot with length 1124559.
+2026-07-16 04:55:32,711 - freqtrade.data.history.history_utils - INFO - Download history data for "LAZIO/USDT", 5m, spot and store in /freqtrade/user_data/data/binance. From 2022-09-10T00:00:00 to 
+2024-10-30T00:00:00
+2026-07-16 04:55:37,118 - freqtrade.data.history.history_utils - INFO - Downloaded data for LAZIO/USDT, 5m, spot with length 224912.
+2026-07-16 04:55:37,404 - freqtrade.data.history.history_utils - INFO - Download history data for "LAZIO/USDT", 1m, spot and store in /freqtrade/user_data/data/binance. From 2022-09-10T00:00:00 to 
+2024-10-30T00:00:00
+2026-07-16 04:55:45,667 - freqtrade.data.history.history_utils - INFO - Downloaded data for LAZIO/USDT, 1m, spot with length 1124559.
+2026-07-16 04:55:46,805 - freqtrade.data.history.history_utils - INFO - Download history data for "PORTO/USDT", 5m, spot and store in /freqtrade/user_data/data/binance. From 2022-09-10T00:00:00 to 
+2024-10-30T00:00:00
+2026-07-16 04:55:52,381 - freqtrade.data.history.history_utils - INFO - Downloaded data for PORTO/USDT, 5m, spot with length 224912.
+2026-07-16 04:55:52,740 - freqtrade.data.history.history_utils - INFO - Download history data for "PORTO/USDT", 1m, spot and store in /freqtrade/user_data/data/binance. From 2022-09-10T00:00:00 to 
+2024-10-30T00:00:00
+2026-07-16 04:56:01,676 - freqtrade.data.history.history_utils - INFO - Downloaded data for PORTO/USDT, 1m, spot with length 1124559.
+2026-07-16 04:56:03,303 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 5m, spot and store in /freqtrade/user_data/data/binance. From 2022-09-10T00:00:00 to 
+2021-05-05T00:00:00
+2026-07-16 04:56:03,306 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 5m, spot with length 0.
+2026-07-16 04:56:05,901 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 1m, spot and store in /freqtrade/user_data/data/binance. From 2022-09-10T00:00:00 to 
+2021-05-05T00:00:00
+2026-07-16 04:56:05,905 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 1m, spot with length 0.
+Timeframe            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2/2 100% • 0:00:49 • 0:00:00
+Downloading BTC/USDT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5/5 100% • 0:01:41 • 0:00:00
