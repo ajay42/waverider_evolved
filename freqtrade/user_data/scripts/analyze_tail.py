@@ -19,12 +19,19 @@ Usage:
 
 import glob
 import json
+import sys
 import zipfile
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 
-TAIL_DIR = Path(__file__).resolve().parents[1] / "backtest_results" / "tail"
+RESULTS_ROOT = Path(__file__).resolve().parents[1] / "backtest_results"
+# Default to the tail runs; --dir <name> reuses this exact analysis on any
+# result set with the same schema (e.g. --dir synthetic).
+_dir = "tail"
+if "--dir" in sys.argv:
+    _dir = sys.argv[sys.argv.index("--dir") + 1]
+TAIL_DIR = RESULTS_ROOT / _dir
 WALLET = 10_000.0
 
 
@@ -67,6 +74,26 @@ def parse_run(path: Path) -> dict:
     }
 
 
+# Known variant suffixes (tail + synthetic). Longest-first so e.g.
+# "all_m15_v105" is stripped before "all_m15".
+VARIANT_SUFFIXES = [
+    "no_governors", "all_m15_v105", "brake_only_m15", "freeze_agg_fixed",
+    "all_m15", "all_on",
+]
+# The "governors ON" variant name differs by result set (tail uses all_m15,
+# synthetic uses all_on) - try each.
+ON_VARIANTS = ["all_m15", "all_on"]
+
+
+def split_window_variant(run_id: str):
+    """Return (window, variant) by stripping a known variant suffix; scenario
+    names may themselves contain underscores, so we can't just split on '_'."""
+    for suf in VARIANT_SUFFIXES:
+        if run_id.endswith("_" + suf):
+            return run_id[: -(len(suf) + 1)], suf
+    return run_id.rsplit("_", 1)[0], run_id.rsplit("_", 1)[-1]
+
+
 def main():
     runs = {}
     for path in sorted(glob.glob(str(TAIL_DIR / "*.zip"))):
@@ -76,31 +103,33 @@ def main():
         except Exception as exc:
             print(f"skip {run_id}: {exc}")
     if not runs:
-        print("no tail results found")
+        print(f"no results found in {TAIL_DIR}")
         return
 
-    header = (f"{'run':<28} {'profit%':>8} {'dd%':>6} {'peak$':>8} {'peak%':>6} "
+    header = (f"{'run':<34} {'profit%':>8} {'dd%':>6} {'peak$':>8} {'peak%':>6} "
               f"{'capit$':>8} {'n':>3} {'grid#':>5} {'trades':>6}")
     current = None
     for run_id in sorted(runs):
-        window = run_id.split("_")[0]
+        window, _ = split_window_variant(run_id)
         if window != current:
             print(f"\n=== {window.upper()} ===")
             print(header)
             current = window
         r = runs[run_id]
-        print(f"{run_id:<28} {r['profit_pct']:>7.2f}% {r['dd_pct']:>5.2f}% "
+        print(f"{run_id:<34} {r['profit_pct']:>7.2f}% {r['dd_pct']:>5.2f}% "
               f"{r['peak_deploy']:>8.0f} {r['peak_deploy_pct']:>5.1f}% "
               f"{r['capit_pnl']:>8.2f} {r['capit_n']:>3} {r['grid_n']:>5} {r['trades']:>6}")
 
     # Acceptance check: with all governors on, peak deployment <= ~60%.
-    print("\n=== ACCEPTANCE (all_m15 vs no_governors, peak deployment %) ===")
-    for window in sorted({r.split("_")[0] for r in runs}):
-        on = runs.get(f"{window}_all_m15")
+    print("\n=== ACCEPTANCE (governors ON vs no_governors, peak deployment %) ===")
+    windows = sorted({split_window_variant(r)[0] for r in runs})
+    for window in windows:
         off = runs.get(f"{window}_no_governors")
+        on = next((runs[f"{window}_{v}"] for v in ON_VARIANTS
+                   if f"{window}_{v}" in runs), None)
         if on and off:
             verdict = "PASS" if on["peak_deploy_pct"] <= 62 else "FAIL"
-            print(f"  {window:<12} governors OFF {off['peak_deploy_pct']:5.1f}%  "
+            print(f"  {window:<22} governors OFF {off['peak_deploy_pct']:5.1f}%  "
                   f"-> ON {on['peak_deploy_pct']:5.1f}%   [{verdict}]")
 
 
