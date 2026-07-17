@@ -44,6 +44,54 @@ before returns.
 
 ## Timeline (UTC)
 
+- **2026-07-17 16:40** — R&D SPRINT DAY 1 (to 2026-07-19). Operating model:
+  git-backed build->test->commit, model-tier discipline, no health cron
+  (file-based state), Docker does the compute. Progress:
+  - **Git baseline** committed (secrets/config/sqlite/data/logs gitignored;
+    verified no jwt key or password staged — the Code Backups snapshots'
+    config.json copies were caught and excluded).
+  - **Stage-2 sweep relaunched** after the reboot crash; resumed correctly
+    from run 4/18, skipping the 3 completed. Running in background.
+  - **Item 1 Tier A (synthetic stress sandbox)** — DONE. Parametric shock
+    generator (depth/speed/recovery/waves) over the pure-Python reference.
+    Confirms the purpose model cleanly: capital traps ONLY when there are
+    no waves AND no recovery; wavy recovering crashes let the strategy skim
+    out (crash_60_v_recover: 15 closes, +$33, $56 trapped vs
+    smooth_70_no_waves: 0 closes, $993 trapped at -52%). Curated 6-scenario
+    shortlist for Tier B.
+  - **Item 3 (win-probability model)** — DONE + validated. 16,259 trades
+    from 53 zips, 100% enriched with as-of (lookahead-free) wave stats.
+    Walk-forward (fit<=2022, validate>=2024). FINDINGS worth acting on:
+    losses concentrate in phase_d (14% win) + forced exits; win rate ~100%
+    until price drawdown >10%, collapsing to 17% beyond 25%; ~100% until
+    wave-age >12 waves, collapsing to 14% beyond 18. Model ranks risk well
+    (Brier 0.011 vs 0.054 baseline) but absolute probabilities in the
+    danger zone are mis-calibrated across eras (train crashes harsher than
+    the validate period) — good for ranking, needs recalibration before
+    any live wiring. NOT wired to live decisions (out of scope by design).
+  - **Item 2 (walk-forward Optuna optimizer)** — BUILT + plumbing validated
+    (study resumable, safety-first objective correct on a real zip, param
+    space sampled). optuna 4.9.0 installed in host venv. Search NOT yet
+    launched — waits for the stage-2 sweep to free the Docker daemon.
+  - Fixed LOGIC_FLOW drain-line doc drift (0.2->1.0%).
+  Remaining Day 1->2: Item 1 Tier B (real governor backtests on the
+  shortlist), Item 4 (offline relearn orchestrator), launch Optuna search,
+  validate top-K out-of-sample, final validation pass + sprint report.
+
+- **2026-07-17 17:15** — ALL FOUR DELIVERABLES BUILT + COMMITTED (git, one
+  commit each). Item 1 Tier B: gen_synthetic_data.py materializes the 6
+  shortlisted shock shapes as real 1m/5m feathers (deep crashes verified,
+  BTC as market factor so freeze engages), run_synthetic.py backtests
+  governors-off vs all-on, analyze_tail.py gains --dir reuse. Item 4:
+  relearn_cycle.py + RELEARNING.md - offline-only, emits inert candidate
+  proposals through the safety gates, never writes config.json. optuna
+  4.9.0 + pandas/pyarrow installed in gitignored .venv-tools. Everything's
+  no-Docker parts are tested green. REMAINING is purely Docker-serial
+  (run one batch at a time - this host crashed under load once): finish
+  stage-2 sweep (on run 5/18) -> synthetic 12 runs -> Optuna 16-trial
+  search + validate -> final pass + sprint report to Analysis And Reports.
+  Sequenced event-driven off task-completion, not polling.
+
 - **2026-07-17 03:55** — RESOURCE POLICY SET, closing out the usage-limit
   crisis that started earlier today: per-trade live monitors removed, the
   2h heartbeat replaced with a 4h one, then that cancelled outright
