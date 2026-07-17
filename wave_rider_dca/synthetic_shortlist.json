@@ -1,0 +1,226 @@
+{
+  "generated_by": "run_synthetic_sandbox.py",
+  "note": "Reference sim = RAW ladder+cap+skim, NO governors. Tier B measures how much the live governors reduce these traps.",
+  "ranked_results": [
+    {
+      "scenario": "flash_80_no_recover",
+      "params": {
+        "magnitude_pct": 80,
+        "drop_ticks": 3,
+        "recovery_frac": 0.0,
+        "recovery_ticks": 0,
+        "wave_amp_pct": 2,
+        "wave_period_ticks": 18,
+        "tail_ticks": 120
+      },
+      "peak_exposure_usd": 993.47,
+      "peak_exposure_pct_of_cap": 99.3,
+      "realized_skim_pnl_usd": 0.21,
+      "trapped_capital_usd": 993.47,
+      "trapped_unreal_loss_pct": -69.5,
+      "deals_closed": 1,
+      "final_state": "ACTIVE",
+      "ticks": 141,
+      "danger_score": 1932.3
+    },
+    {
+      "scenario": "wavy_90_extreme",
+      "params": {
+        "magnitude_pct": 90,
+        "drop_ticks": 120,
+        "recovery_frac": 0.1,
+        "recovery_ticks": 40,
+        "wave_amp_pct": 6,
+        "wave_period_ticks": 20,
+        "tail_ticks": 80
+      },
+      "peak_exposure_usd": 968.83,
+      "peak_exposure_pct_of_cap": 96.9,
+      "realized_skim_pnl_usd": 1.15,
+      "trapped_capital_usd": 968.83,
+      "trapped_unreal_loss_pct": -71.76,
+      "deals_closed": 2,
+      "final_state": "ACTIVE",
+      "ticks": 260,
+      "danger_score": 1906.27
+    },
+    {
+      "scenario": "double_dip_75",
+      "params": {
+        "magnitude_pct": 75,
+        "drop_ticks": 50,
+        "recovery_frac": 0.5,
+        "recovery_ticks": 100,
+        "wave_amp_pct": 4,
+        "wave_period_ticks": 24,
+        "tail_ticks": 120,
+        "dead_cat": true
+      },
+      "peak_exposure_usd": 993.47,
+      "peak_exposure_pct_of_cap": 99.3,
+      "realized_skim_pnl_usd": 0.23,
+      "trapped_capital_usd": 993.47,
+      "trapped_unreal_loss_pct": -62.86,
+      "deals_closed": 1,
+      "final_state": "ACTIVE",
+      "ticks": 294,
+      "danger_score": 1866.33
+    },
+    {
+      "scenario": "smooth_70_no_waves",
+      "params": {
+        "magnitude_pct": 70,
+        "drop_ticks": 90,
+        "recovery_frac": 0.0,
+        "recovery_ticks": 0,
+        "wave_amp_pct": 0.3,
+        "wave_period_ticks": 18,
+        "tail_ticks": 120
+      },
+      "peak_exposure_usd": 993.47,
+      "peak_exposure_pct_of_cap": 99.3,
+      "realized_skim_pnl_usd": 0.0,
+      "trapped_capital_usd": 993.47,
+      "trapped_unreal_loss_pct": -52.56,
+      "deals_closed": 0,
+      "final_state": "ACTIVE",
+      "ticks": 228,
+      "danger_score": 1764.01
+    },
+    {
+      "scenario": "grind_80_slow_wavy",
+      "params": {
+        "magnitude_pct": 80,
+        "drop_ticks": 300,
+        "recovery_frac": 0.15,
+        "recovery_ticks": 60,
+        "wave_amp_pct": 5,
+        "wave_period_ticks": 26,
+        "tail_ticks": 80
+      },
+      "peak_exposure_usd": 993.47,
+      "peak_exposure_pct_of_cap": 99.3,
+      "realized_skim_pnl_usd": 1.96,
+      "trapped_capital_usd": 993.47,
+      "trapped_unreal_loss_pct": -52.42,
+      "deals_closed": 3,
+      "final_state": "ACTIVE",
+      "ticks": 466,
+      "danger_score": 1762.61
+    },
+    {
+      "scenario": "flash_60_no_recover",
+      "params": {
+        "magnitude_pct": 60,
+        "drop_ticks": 3,
+        "recovery_frac": 0.0,
+        "recovery_ticks": 0,
+        "wave_amp_pct": 2,
+        "wave_period_ticks": 18,
+        "tail_ticks": 120
+      },
+      "peak_exposure_usd": 993.47,
+      "peak_exposure_pct_of_cap": 99.3,
+      "realized_skim_pnl_usd": 0.21,
+      "trapped_capital_usd": 993.47,
+      "trapped_unreal_loss_pct": -39.0,
+      "deals_closed": 1,
+      "final_state": "ACTIVE",
+      "ticks": 141,
+      "danger_score": 1629.29
+    },
+    {
+      "scenario": "flash_50_then_flatline",
+      "params": {
+        "magnitude_pct": 50,
+        "drop_ticks": 2,
+        "recovery_frac": 0.0,
+        "recovery_ticks": 0,
+        "wave_amp_pct": 1,
+        "wave_period_ticks": 18,
+        "tail_ticks": 200
+      },
+      "peak_exposure_usd": 993.47,
+      "peak_exposure_pct_of_cap": 99.3,
+      "realized_skim_pnl_usd": 0.0,
+      "trapped_capital_usd": 993.47,
+      "trapped_unreal_loss_pct": -19.58,
+      "deals_closed": 0,
+      "final_state": "ACTIVE",
+      "ticks": 220,
+      "danger_score": 1436.36
+    },
+    {
+      "scenario": "deadcat_65_trap",
+      "params": {
+        "magnitude_pct": 65,
+        "drop_ticks": 30,
+        "recovery_frac": 0.6,
+        "recovery_ticks": 80,
+        "wave_amp_pct": 3,
+        "wave_period_ticks": 22,
+        "tail_ticks": 120,
+        "dead_cat": true
+      },
+      "peak_exposure_usd": 993.47,
+      "peak_exposure_pct_of_cap": 99.3,
+      "realized_skim_pnl_usd": 9.1,
+      "trapped_capital_usd": 693.03,
+      "trapped_unreal_loss_pct": -52.43,
+      "deals_closed": 1,
+      "final_state": "ACTIVE",
+      "ticks": 252,
+      "danger_score": 1304.75
+    },
+    {
+      "scenario": "bear_grind_40_wavy",
+      "params": {
+        "magnitude_pct": 40,
+        "drop_ticks": 180,
+        "recovery_frac": 0.3,
+        "recovery_ticks": 60,
+        "wave_amp_pct": 4,
+        "wave_period_ticks": 24,
+        "tail_ticks": 60
+      },
+      "peak_exposure_usd": 650.02,
+      "peak_exposure_pct_of_cap": 65.0,
+      "realized_skim_pnl_usd": 8.73,
+      "trapped_capital_usd": 313.09,
+      "trapped_unreal_loss_pct": -7.04,
+      "deals_closed": 2,
+      "final_state": "ACTIVE",
+      "ticks": 324,
+      "danger_score": 497.64
+    },
+    {
+      "scenario": "crash_60_v_recover",
+      "params": {
+        "magnitude_pct": 60,
+        "drop_ticks": 40,
+        "recovery_frac": 1.0,
+        "recovery_ticks": 80,
+        "wave_amp_pct": 5,
+        "wave_period_ticks": 20,
+        "tail_ticks": 40
+      },
+      "peak_exposure_usd": 993.47,
+      "peak_exposure_pct_of_cap": 99.3,
+      "realized_skim_pnl_usd": 33.63,
+      "trapped_capital_usd": 56.41,
+      "trapped_unreal_loss_pct": -1.29,
+      "deals_closed": 15,
+      "final_state": "ACTIVE",
+      "ticks": 180,
+      "danger_score": 305.51
+    }
+  ],
+  "shortlist_scenarios": [
+    "flash_80_no_recover",
+    "wavy_90_extreme",
+    "double_dip_75",
+    "smooth_70_no_waves",
+    "grind_80_slow_wavy",
+    "crash_60_v_recover"
+  ]
+}
