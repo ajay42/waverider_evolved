@@ -133,6 +133,13 @@ def make_correlated_panel(
     )
     market_frac = [p / 100.0 - 1.0 for p in market]  # deviation from 1.0
 
+    # A coin can crash hard but not to literally zero. Floor the beta-scaled
+    # factor so the deepest a coin reaches is FLOOR_FRAC of its start (here
+    # -92%). Without this, beta>1 x an 80-90% market crash drives prices to ~0,
+    # which trips Freqtrade's mandatory -99% stop backstop and contaminates the
+    # governor comparison with "stop_loss" exits the no-stop-loss strategy
+    # would never actually take.
+    FLOOR_FRAC = 0.08
     panel: dict[str, list[float]] = {}
     for idx, coin in enumerate(coins):
         beta = betas.get(coin, 1.0)
@@ -142,7 +149,8 @@ def make_correlated_panel(
             # phase-shifted idiosyncratic wobble so coins are correlated but
             # not identical.
             wobble = rng.uniform(-0.006, 0.006)
-            level = 100.0 * (1.0 + beta * mf) * (1.0 + wobble)
+            factor = max(FLOOR_FRAC, 1.0 + beta * mf)
+            level = 100.0 * factor * (1.0 + wobble)
             series.append(round(max(level, 1e-6), 6))
         panel[coin] = series
     return panel

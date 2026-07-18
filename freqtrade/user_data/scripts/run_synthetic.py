@@ -67,7 +67,10 @@ def main():
         if list(results_dir.glob(f"{run_id}*.zip")):
             print(f"[{i}/{len(runs)}] {run_id} already done, skipping", flush=True)
             continue
-        datadir = f"/freqtrade/user_data/data/binance_synthetic/{scen}"
+        # Freqtrade uses --datadir AS-IS (it only appends the exchange name when
+        # no --datadir is given), so point it straight at the folder holding the
+        # feathers: .../<scen>/binance/.
+        datadir = f"/freqtrade/user_data/data/binance_synthetic/{scen}/binance"
         cmd = [
             DOCKER, "compose", "run", "--rm", "freqtrade", "backtesting",
             "--config", f"/freqtrade/user_data/matrix_configs/{run_id}.json",

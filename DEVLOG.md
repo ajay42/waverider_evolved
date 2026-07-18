@@ -78,6 +78,20 @@ before returns.
   shortlist), Item 4 (offline relearn orchestrator), launch Optuna search,
   validate top-K out-of-sample, final validation pass + sprint report.
 
+- **2026-07-18 05:25** — STEP 1+2 DONE. Stage-2 sweep finished 18/18: chop
+  favors tight ladder spacing (dev1 +0.42% vs dev3 +0.06%); best-5
+  concentration did NOT beat the full set on train (-0.09/-0.12%) - shaped
+  the Optuna space; concentration deferred to the optimization phase.
+  STEP 2 (Ajay's 5-day cap) implemented + VERIFIED: max_deal_age_days=5.0,
+  force-close "age_cap_close" above every lifecycle deadline (mirrors
+  drain_close full-exit; ends the stint). Gates green (test_sidecar 10/10,
+  compiles, snapshot 2026-07-18-5day-age-cap). Smoke backtest bear2022b:
+  11 age_cap closes, ALL at ~5.0d, avg -3.07%, while 265 deals still closed
+  profitably via grace -> window net +1.53%. Cap works without wrecking
+  profitability. NOW running Step 3: synthetic Tier-B (12 runs, governors
+  on/off across 6 beyond-history crashes, cap live). Then Step 4 Optuna,
+  Step 5 report.
+
 - **2026-07-17 17:15** — ALL FOUR DELIVERABLES BUILT + COMMITTED (git, one
   commit each). Item 1 Tier B: gen_synthetic_data.py materializes the 6
   shortlisted shock shapes as real 1m/5m feathers (deep crashes verified,
