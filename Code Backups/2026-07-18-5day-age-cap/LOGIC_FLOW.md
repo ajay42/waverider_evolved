@@ -26,11 +26,6 @@ skip if an order is already pending, or the fill ledger is empty
 
 1. DRAIN FAST-EXIT   draining AND loss ≤ 1.0%  → close everything ("drain_close")
 
-1b. AGE CAP          deal open ≥ max_deal_age_days (5) → force full close
-                     ("age_cap_close"), loss accepted. Hard absolute-clock
-                     backstop above every lifecycle deadline: no deal traps
-                     capital past 5 days. 0 disables.
-
 2. CORRIDOR BRAKE    latched? OR drawdown-from-base > max(1.5 × coin amplitude, 12%)
                      OR exposure > 60% of per-coin cap
                      → latch (until deal closes) → SELL-ONLY GRID
