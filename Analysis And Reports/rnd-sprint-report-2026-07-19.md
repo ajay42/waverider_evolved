@@ -120,6 +120,51 @@ test-before-deploy gate and can chase noise into drawdown).
    governor ablation, adversarial extremes) before any go-live.
 
 ---
-*Artifacts: `backtest_results/{synthetic,optuna}`, `win_probability_model.json`,
-`optuna_validation.json`, `matrix_configs/candidates/20260719_candidate.json`.
+
+## ADDENDUM — Berserk validation results (2026-07-19)
+
+Head-to-head + component ablation on two REAL crash windows (May-2021 crash,
+LUNA-era bear-2022b). 5 variants × 2 windows, 10/10 runs clean.
+
+| Variant | crash2021 profit / dd / peak-deploy | bear2022b profit / dd / peak-deploy |
+|---|---|---|
+| **live (current)** | **−1.54% / 1.80% / 6.8%** | **0.00% / 0.22% / 5.6%** |
+| candidate (trial 8) | −1.96% / 2.43% / 12.1% | −0.01% / 0.39% / 9.6% |
+| age_cap OFF | −3.01% / 3.27% / 6.8% | −0.08% / 0.78% / 5.6% |
+| lifecycle OFF | −1.34% / 1.58% / 7.1% | −0.03% / 0.23% / 5.6% |
+| no governors | −2.71% / 4.75% / **36.7%** | +2.45% / 0.42% / 18.8% |
+
+### Verdict 1 — Candidate vs live: **LIVE WINS. Do not adopt the candidate.**
+The Optuna candidate is worse in BOTH real crash windows: bigger losses and
+~2× the capital deployed (its tighter 1.4% ladder spacing buys deeper into
+crashes). Its thin out-of-sample edge (+0.04%) came from calm 2026 windows and
+does not survive real crash conditions. **The relearn review gate did exactly
+its job: propose → adversarial test → reject.** Current live config stands.
+
+### Verdict 2 — 5-day age cap: **EARNS ITS KEEP, decisively.**
+Turning it OFF doubles the crash2021 loss (−1.54% → −3.01%) and nearly doubles
+drawdown (1.80% → 3.27%). Cutting stuck deals at day 5 frees capital before the
+bleed deepens. Keep at 5.0 days.
+
+### Verdict 3 — Lifecycle: **neutral in crashes; keep for normal regimes.**
+Lifecycle OFF was marginally better in crash2021 (−1.34% vs −1.54%) and
+marginally worse in bear2022b. Honest read: in pure crashes the governors +
+age cap dominate and the lifecycle adds little — its proven value (stage-1
+matrix) is in chop/normal regimes. Keep it; don't credit it as a crash tool.
+
+### Verdict 4 — The ungoverned control tells the whole story.
+No-governors made +2.45% in ONE window — while deploying 3–5× the capital
+(up to 36.7% of wallet), taking 16 capitulations across the two windows
+(−$524 total) vs **zero capitulations for every governed variant**. Occasional
+extra profit bought with multiples of tail risk: exactly the trade the strategy
+exists to refuse.
+
+**Final config decision (data-driven): current live config is the winner —
+governors ON, 5-day cap ON, lifecycle ON, current geometry. The candidate is
+archived, not adopted.**
+
+---
+*Artifacts: `backtest_results/{synthetic,optuna,berserk}`,
+`win_probability_model.json`, `optuna_validation.json`,
+`matrix_configs/candidates/20260719_candidate.json` (archived, rejected).
 Reproduce via the scripts in `user_data/scripts/`.*
