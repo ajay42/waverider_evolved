@@ -126,3 +126,31 @@ backtest + Code Backups snapshot.
    `Analysis And Reports/`.
 6. THEN optimization phase (deferred): fewer-coins/bigger-bet, param + dynamic
    per-coin tuning driven by the Optuna results and win-model thresholds.
+
+---
+
+## Post-sprint directives (Ajay, 2026-07-19)
+
+- **GitHub**: repo https://github.com/ajay42/waverider_evolved. Local repo
+  cleaned to WaveRider-only (history rewritten to strip 3commas/accumulator/
+  accumulator_bot/mean-reversion.pine/.claude; accumulator_bot preserved on
+  disk untracked). Branch renamed master->main, 10 clean commits, no secrets.
+  PUSH PENDING: needs Ajay's interactive GCM auth - he runs
+  `git push -u origin main` himself (Claude's non-interactive shell can't
+  complete the popup). refs/original + pre-cleanup-backup hold the pre-rewrite
+  originals locally until push confirmed.
+- **Go-live stance**: Ajay wants a SMALL LIVE FUND sooner (better teacher than
+  paper). Compress pure-paper to a 2-3 day cloud dry-run smoke, then small live
+  (spot-only, withdrawals OFF, IP-locked, small capital, per-coin cap scaled
+  down). Plan in freqtrade/CLOUD_DEPLOYMENT.md. Ajay does: VPS payment + API
+  keys. Claude does: all infra/automation.
+- **NEW DELIVERABLES (build after validation, at the "end"):**
+  1. BERSERK VALIDATION - aggressively test every theory/plan and logical
+     deviations to prove worth (ablations, adversarial scenarios, param
+     extremes, purpose-audit).
+  2. weekly_summary.py - weekly trade-execution digest + improvement
+     suggestions (file output, optional Telegram).
+  3. STRATEGY REFERENCE CARD - a file summarizing the FINAL strategy in blocks
+     + bullets, readable months later, with usage recommendations for the
+     operator. Build AFTER berserk picks the final config.
+  4. Cloud deployment (see CLOUD_DEPLOYMENT.md) - after all above green.

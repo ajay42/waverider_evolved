@@ -37,3 +37,7 @@ __pycache__/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Transient run logs and generated analysis artifacts
+freqtrade/user_data/*.log
+freqtrade/user_data/analysis/
