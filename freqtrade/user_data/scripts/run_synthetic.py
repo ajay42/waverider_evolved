@@ -96,10 +96,10 @@ def main():
             produced = sorted((USER_DATA / "backtest_results").glob("backtest-result-*.zip"))
             if produced:
                 newest = produced[-1]
-                newest.rename(results_dir / f"{run_id}.zip")
+                newest.replace(results_dir / f"{run_id}.zip")
                 meta = newest.with_name(newest.name.replace(".zip", ".meta.json"))
                 if meta.exists():
-                    meta.rename(results_dir / f"{run_id}.meta.json")
+                    meta.replace(results_dir / f"{run_id}.meta.json")
             summary = [l for l in (result.stdout or "").splitlines() if "Total profit %" in l]
             line = summary[0].strip().replace("│", "|") if summary else ""
             print(f"    ok ({took:.0f}s) {line}", flush=True)
