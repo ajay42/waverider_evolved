@@ -1,210 +1,89 @@
-# CONTEXT — Wave Rider session state (reload this first)
+# CONTEXT — WaveRider session state (reload this first)
 
-**Purpose of this file:** full working context for resuming after a context
-reset. Read top to bottom, then check DEVLOG.md for anything newer than the
-"last updated" stamp below (DEVLOG is newest-first — check its TOP entry,
-right after the header, not the bottom). Keep this file UPDATED at every
-milestone — it is the session's recovery point.
+**Purpose:** full working context for resuming after a context reset. Read this,
+then `Analysis And Reports/rnd-sprint-context-digest.md` (sprint decisions +
+findings), then DEVLOG.md TOP entry (newest-first) for anything newer.
 
-**Last updated:** 2026-07-17 — RESOURCE POLICY SET (Ajay's order after his
-5h usage limit kept exhausting; supersedes the earlier token-lean note):
-- **Model policy:** Ajay runs his side at Opus/high-effort by default (his
-  own `/model` choice, not something Claude controls). Claude scales
-  Sonnet/Fable for its own work (mainly which model it picks when spawning
-  subagents), matched to task difficulty. EXCEPTION: anything touching
-  capital-safety-critical code — the three governors (corridor brake,
-  crash freeze, aggregate exposure), ladder math, lifecycle phase
-  transitions, entry/exit gating — gets extra reasoning depth regardless
-  of cost. Correctness beats convenience on critical components, always.
-- **Heartbeat:** every 8 HOURS, MISSION-CRITICAL-ONLY (not a trade digest):
-  (1) both containers up, (2) grep both logs since last check for
-  CORRIDOR BRAKE / CRASH FREEZE / Traceback / ERROR, (3) aggregate exposure
-  within ceiling. Silent (no chat message, no file write) on a clean check
-  — only writes a DEVLOG entry and flags Ajay if something needs
-  attention. Never arms a standing log-stream Monitor (that pattern is the
-  likely original cause of the usage burn) and never spawns subagents for
-  the routine check. Session-only — recreate on session restart at the
-  same 8h cadence and scope.
-- **Trade notifications:** NO per-trade monitors ever, and no routine
-  digest either — the heartbeat above only speaks when something's wrong.
-  Ajay checks trade detail himself via status.py / FreqUI when he wants it.
-- **Resource dedication:** Ajay's Claude usage is fully allocated to this
-  project for now (not a constraint on session/subagent structure). Fresh
-  session per work phase still stands — read this file + DEVLOG's top
-  entry, not old chat. Big outputs to files, not chat. Batch questions.
-  Long compute runs unattended; results reviewed in ONE turn. Scripts are
-  standalone — Ajay can run run_stage2.py / status.py / analyzers himself
-  at zero Claude cost.
-- **Adaptive throttling:** Claude cannot directly read Ajay's 5h usage
-  meter. Trigger to downshift: Ajay flags it, or clear proxy signs
-  (frequent context compaction, degraded turnaround). Downshift = pause
-  launching new heavy sweeps/multi-run backtests and subagent work, stick
-  to file/script-based checks and small fixes only, until Ajay confirms
-  the limit reset — then resume the queued work at full intensity.
-(48h mission effectively concluded; remaining queue in section 5 hands
-over to normal-cadence work.)
-**Newest capital rule:** 60% ceiling applies to FRESH deployment; parked
-capital exempt up to 20% of wallet (inactive during freeze + 6h after);
-hard 20% floor untouchable by any code path. Joiners must clear the 2.0
-quality floor (empty slot beats mediocre coin).
+**Last updated:** 2026-07-19 — post-R&D-sprint, berserk validation running.
 
-**Mission scoreboard (hour 32):**
-- CRASH TESTS: definitive PASS on repaired data (run 2, 20/20): governed
-  deployment ≤7% vs 17-37% ungoverned; zero capitulations; worst window
-  −3.33% vs −9.85%; freeze proven (saved ~2pp in LUNA window). Report +
-  addendum in Analysis And Reports. Three-layer freeze bug chain + the
-  --prepend data-gap lesson documented in DEVLOG (16-July entries).
-- SELECTOR: predictive-power PROVEN — decile table monotonic 6.2→37.0
-  fwd waves/week, median Spearman 0.806 (report in folder). Scoring math
-  has known-answer unit tests in the pre-deploy gate.
-- RUNNING NOW (launched ~23:45 UTC): stage-2 sweep, 18 train runs (~10h):
-  12 geometry (dev 1/2/3 × vol 1.05/1.10) + 6 of AJAY'S BEST-COINS
-  EXPERIMENT (top-5 cohorts; best5_static vs best5_dyn_a k/m=0.4/0.4 vs
-  best5_dyn_b 0.6/0.5) on 2022 train windows; validation on 2026 windows
-  after via --validate. Log: user_data/stage2_run.log; results:
-  backtest_results/stage2/.
-- NEW STRATEGY CAPABILITY: dynamic_ladder_enabled — per-coin spacing/TP =
-  mult × coin amplitude, clamped [0.8,5]%, set at BO, frozen per deal
-  (code default off; used by stage-2B variants). Live config does NOT
-  have it on. Per-coin position SIZING deliberately deferred (needs
-  P1-2 sizing framework — do not bolt on hastily).
-- DEFERRED past mission end (be honest with Ajay): structure refactor
-  (flow file + modules — must not touch strategy mid-sweep), two-stage
-  ladder, score-scaled sizing, rotation replay, graphs, synthetic MC,
-  ablation, selector doctor. Live tally: ~40 closes, ZERO losing full
-  closes; ALLO 3 wins since cooldown rejoin; braked coins wind down fine.
+## Current state (one screen)
 
----
+- **Project:** WaveRider DCA crypto strategy on Freqtrade (Binance spot,
+  dry-run). Purpose: escape bad deals profitably, never trap capital, capital
+  safety before returns.
+- **Everything lives in:** `C:\Users\ajay\Desktop\code by claude\` — now
+  WaveRider-ONLY (other projects moved to `Desktop\other-projects\`).
+- **Git:** local repo clean, branch `main`, ~14 commits, WaveRider-only history
+  (rewritten; `refs/original` + `pre-cleanup-backup` hold pre-rewrite state).
+  Remote `origin` = https://github.com/ajay42/waverider_evolved —
+  **PUSH PENDING: Ajay must run `git push -u origin main` himself** (interactive
+  GCM auth; Claude cannot complete the popup).
+- **Live bot:** two containers (`freqtrade`, `freqtrade-pairlist`) up for days,
+  dry-run. FreqUI localhost:8080.
+- **R&D sprint (17→19 July): DONE.** All four deliverables built, tested,
+  committed: synthetic stress tests (Tier A+B), walk-forward Optuna, win-prob
+  model, offline relearn orchestrator. Plus the 5-DAY DEAL AGE CAP
+  (`max_deal_age_days=5`, exit tag `age_cap_close`) — implemented, verified
+  firing at exactly 5.0d, in live config + strategy default.
+- **Sprint report:** `Analysis And Reports/rnd-sprint-report-2026-07-19.md`.
+  Headlines: governors cut 80%-grind loss −19.8%→−4.3%; 5-day cap closes the
+  wave-less-crash permanent trap; Optuna's aggressive train-winner LOST
+  out-of-sample while conservative trial-8 stayed positive+safe (overfitting
+  caught); honest verdict = capital-preservation strategy, not profit engine.
+- **Candidate config:** `user_data/matrix_configs/candidates/20260719_candidate.json`
+  (trial 8: brake 1.5→2.8, spacing 2→1.4, agg 60→50, dynamic ladder ON) —
+  INERT proposal, never auto-applied. Recommendation: deploy current-live
+  first; adopt candidate later via its review gate.
+- **RUNNING NOW:** berserk validation (`run_berserk.py` → berserk_run.log,
+  results `backtest_results/berserk/`): 5 variants (live / candidate /
+  age_cap_off / lifecycle_off / no_governors) × 2 real crash windows
+  (crash2021, bear2022b). ~3-4h. On completion: analyze with
+  `analyze_tail.py --dir berserk`, fold into report addendum, ping Ajay.
+- **New operator tools:** `weekly_summary.py` (weekly digest; separates managed
+  capital-freeing exits from real losses), `STRATEGY_REFERENCE.md` (operator's
+  manual), `freqtrade/CLOUD_DEPLOYMENT.md` (VPS plan; Ajay pays + enters API
+  keys — spot-only, withdrawals OFF, IP-locked; compressed 2-3d cloud dry-run
+  then small live fund).
 
-## 1. What this is
+## Operating rules in force
 
-Wave Rider DCA: Ajay's crypto trading strategy. Core purpose (check every
-change against this): **get out of bad deals profitably, never let capital
-get trapped, waves are the fuel. Capital safety before returns.**
-Mechanics: no entry signal (always-in), pre-calculated safety-order ladder,
-selective "skim" exits (close best combo of extreme fills), deal lifecycle
-(grace → grid → wave-ride → decision) timed in each coin's own wave period,
-three safety governors (corridor brake / crash freeze / aggregate ceiling),
-amplitude-ranked dynamic coin selection with quality-floor rotation and
-slot parking. Everything dry-run (paper) on Binance spot via Freqtrade.
+1. Build → test → commit (git). `test_sidecar.py` MUST pass before any
+   strategy/sidecar decision-code deploy.
+2. Docker batches ONE at a time (host crashed under concurrent load once).
+   `MSYS_NO_PATHCONV=1` for container paths in Git Bash. Use `.replace()` not
+   `.rename()` for Windows file moves.
+3. Usage limits are top priority: file-based state (no heartbeat cron), big
+   outputs to files, batch work into background Docker runs, model tiers
+   (Sonnet/Fable routine, Opus for capital-safety code). Slow down / branch to
+   lighter tasks if the limit nears; resume after reset.
+4. Optimizations (fewer-coins/bigger-bet, dynamic sizing, param tuning) come
+   AFTER core development; candidate configs only via the relearn review gate.
+5. Reports → `Analysis And Reports/`; snapshots → `Code Backups/` before major
+   strategy changes; keep LOGIC_FLOW.md updated.
+6. Every terminal coin state needs its own entry-gate block (stint-enders:
+   phase_d_close, drain_close, age_cap_close).
+7. Simple language with Ajay; justify against the purpose; honest corrections.
 
-## 2. Where everything lives
+## Next queue (after berserk)
 
-```
-C:\Users\ajay\Desktop\code by claude\
-  CONTEXT.md            <- this file
-  DEVLOG.md             <- timestamped mission journal (append-only)
-  DESIGN.md ->          freqtrade/DESIGN.md (architecture spec)
-  freqtrade/
-    docker-compose.yml  <- TWO services: "freqtrade" (bot) + "freqtrade-pairlist" (coin picker)
-    CAPITAL_SAFETY.md   <- safety spec (P0-1/P0-2/P1-1 implemented; P1-2 pending)
-    LOGIC_FLOW.md       <- ONE-PAGE pseudocode of the whole system; keep updated
-    user_data/
-      config.json       <- ALL tunables in "wave_rider" section; FreqUI creds in api_server
-      config_backtest.json
-      strategies/WaveRiderDCA.py   <- the bot (~1,300 lines)
-      scripts/pairlist_updater.py  <- the coin picker sidecar
-      scripts/{run_matrix,run_tail,analyze_matrix,analyze_tail,monte_carlo,
-               build_cohorts,find_regime_windows,test_sidecar}.py
-      pairlist.json / pairlist_state.json  <- picker->bot handoff files
-      backtest_results/{matrix,tail}/      <- result zips by run name
-      cohorts/          <- as-of coin lists per backtest window
-      logs/phase_d_decisions.jsonl         <- capitulation decision log
-  Analysis And Reports/ <- dated markdown reports (stage-1 matrix + backtest reports)
-  Code Backups/         <- 2026-07-15-tier1-governors/, 2026-07-16-pre-parking/,
-                           simple-reference-wave-rider/ (the plain-Python original)
-  wave_rider_dca/       <- original simple simulator + REGENERATION_PROMPT.md
-```
+1. Berserk report addendum + ping Ajay (running now).
+2. Ajay pushes to GitHub; consider making repo private (strategy edge).
+3. Cloud deploy per CLOUD_DEPLOYMENT.md (Ajay: VPS + keys; Claude: infra):
+   2-3d cloud dry-run smoke → small live fund (spot-only, no-withdrawal,
+   IP-locked keys, per-coin cap scaled down) → scale on proof.
+4. Optimization phase (deferred): candidate adoption decision, concentration
+   theory, per-coin sizing (P1-2), using berserk + weekly live data.
 
-FreqUI: http://localhost:8080 (user "freqtrader", password in config.json).
-Docker binary: `"/c/Program Files/Docker/Docker/resources/bin/docker.exe"`
-(not on PATH). Bash needs `MSYS_NO_PATHCONV=1` for container paths.
+## Key learnings bank (don't relearn these)
 
-## 3. Live state (as of last update)
-
-- Dry-run since 2026-07-14 14:38 UTC. Closed-deal scoreboard: **19 wins,
-  0 losing closes** (excl. penny drain-evictions: U −0.24%, XAUT −0.59%,
-  U −0.22%, XAUT −0.19%, INJ −0.04%) + grid partials on braked coins.
-- **Parked (winding down, not consuming slots):** ZBT (braked −24%, ~$190),
-  HEI (braked −16.5%, ~$105), CRV (draining). List = 13 pairs, 10 fresh.
-- Config highlights now live: phase_order "grid,wr" (stage-1 winner),
-  run-limit OFF (quality floor 2.0 rotates instead), drain fast-exit 1%,
-  parking on (max 3, refill gate 45%), all governors on.
-- KNOWN quirk: freqtrade shows per-exit profit% vs blended average, so
-  profitable grid slices can display negative. Ledger truth ≠ display.
-
-## 4. Background work in flight
-
-- **Tail safety: run-1 CORRECTED** — data gaps found (no --prepend =
-  older ranges silently dropped; BTC missing everywhere + 1-4 cohort
-  coins/window). Within-window comparisons stand; absolutes understated;
-  freeze untested. Data repaired + verified; freeze signal rewired via
-  BTC informative merge (ref_change_24h column in every pair's frame);
-  run-1 zips quarantined (tail/run1-datagaps/); slimmed 20-run re-sweep
-  READY (run_tail.py, 5 variants). IN PROGRESS at context-save time:
-  freeze-engagement diagnostic over 20210514-22 (FZDBG instrumentation in
-  strategy — REMOVE after diagnosis); then launch the 20-run sweep;
-  then report addendum. NOTE: live bot NOT restarted since informative
-  changes — restart + monitor re-arm needed at next deploy anyway.
-  Blocked intermittently by permission-service outages; retry Bash.
-- **Live monitor**: docker-log follower streaming trade/governor events
-  (re-arm after every bot restart! pattern includes CORRIDOR BRAKE,
-  CRASH FREEZE, drain_close, phase_d, lifecycle transitions).
-- **Heartbeat cron** 41e13bd4 every 2h: drives the mission between events
-  (session-only; recreate if session restarted).
-
-## 5. The 48h mission (2026-07-15 15:45 -> 2026-07-17 15:45 UTC)
-
-Mandate: develop/test/evolve/stress-test/audit/backtest/review/plot
-autonomously; mission-critical rigor; backups at MAJOR iterations only;
-ping Ajay (simple language) only at behavior-changing forks; DEVLOG is the
-reporting channel. Plan position: crash-test report next -> Monte Carlo ->
-stage-2 walk-forward (incl. lifecycle-length sweep + amplitude-normalized
-+ two-stage ladder + conditional grace) -> structure refactor (flow file +
-modules; AFTER tail runs finish) -> more unit tests -> graphs ->
-synthetic-crash MC -> purpose audit.
-
-## 6. Standing rules and conventions
-
-1. Reports -> "Analysis And Reports/", dated markdown.
-2. Snapshot to "Code Backups/<date>-<milestone>/" BEFORE major changes.
-3. LOGIC_FLOW.md updated on every flow change (it ships with backups).
-4. **No decision-code edit deploys without `python user_data/scripts/test_sidecar.py` passing** (rule born from the 07-15 closes-branch regression).
-5. Simple language with Ajay; justify against the purpose; validate > build.
-6. Every terminal coin state needs its own entry-gate block (lesson from
-   the U/XAUT reopen bug).
-7. Check BOTH containers' logs when auditing time-bound actions (drain
-   events log in the SIDECAR, trades in the BOT).
-8. Timestamps: bot/sidecar log UTC; Ajay is UTC+5:30.
-
-## 7. Decision history in one breath
-
-Stage-1 matrix (30 runs): life_grid_first wins consistency; grace positive
-except chop×wave; wave cohort = bear/chop edge, majors = bull edge;
-recycling needs the lifecycle. Tier-1 governors implemented per
-CAPITAL_SAFETY.md after Ajay's "go". Run-limit removed for quality-floor
-rotation (Ajay). Parking added (Ajay's idea + safety package). Phase-D
-−15% is a capitulation floor, NOT a stop (never tune loss% for safety —
-tune wave-age deadlines). 60% ceiling = crash budget; real idle-capital
-fix is P1-2 %-wallet sizing (queued). Magenta chart lines = all orders
-with an armed TP in any phase. Stepped historical chart lines: QUEUED.
-
-## 8. Resume checklist after a context reset
-
-1. Read this file, then DEVLOG.md from the TOP (right after the header —
-   DEVLOG is newest-first, new entries are inserted there, not appended
-   at the bottom).
-2. `docker ps` — expect freqtrade + freqtrade-pairlist up; tail-run
-   containers may exist while the sweep runs. If the daemon isn't up yet
-   (e.g. right after a Windows reboot), wait ~30-60s and recheck before
-   assuming a real problem — Docker Desktop takes a moment to start and
-   the containers rejoin on their own via the compose restart policy.
-3. Check tail sweep: count zips in backtest_results/tail/ (target 28);
-   log at user_data/tail_run.log.
-4. No standing log monitor to re-arm by design — the 8h heartbeat (below)
-   covers governor trips / errors on its own schedule instead.
-5. Recreate the 8h mission-critical-only heartbeat cron if the session
-   restarted (see the top of this file for scope).
-6. Memory files (auto-loaded) hold durable project facts; this file holds
-   operational state. Trust newer over older; verify anything critical
-   against the DB/logs before acting.
+- Freqtrade: `--datadir` used AS-IS (no exchange suffix appended); RemotePairList
+  file:// needs FOUR slashes; `price_side: "other"` for market orders;
+  backtest custom-data round-trips None as 'null' string (use typed coercers);
+  informative pairs must read config directly (bot_start ordering); download-data
+  needs `--prepend` to backfill older ranges.
+- Windows: cp1252 console → reconfigure stdout utf-8; Path.rename fails on
+  existing target → Path.replace; Git Bash mangles /paths → MSYS_NO_PATHCONV=1.
+- Synthetic data: floor coin prices (8% of start) or beta>1 crashes hit ~0 and
+  trip freqtrade's mandatory −99% stop backstop (fake stop_loss exits).
+- Win-model: danger zones = price drawdown >10-15% and wave-age >12; wave score
+  is a SELECTION edge, not a per-deal outcome predictor.
