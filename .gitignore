@@ -41,3 +41,6 @@ Desktop.ini
 # Transient run logs and generated analysis artifacts
 freqtrade/user_data/*.log
 freqtrade/user_data/analysis/
+
+# Generated weekly operator summaries
+Analysis And Reports/weekly/
