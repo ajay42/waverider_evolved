@@ -18,8 +18,13 @@ findings), then DEVLOG.md TOP entry (newest-first) for anything newer.
   Remote `origin` = https://github.com/ajay42/waverider_evolved —
   **PUSH PENDING: Ajay must run `git push -u origin main` himself** (interactive
   GCM auth; Claude cannot complete the popup).
-- **Live bot:** two containers (`freqtrade`, `freqtrade-pairlist`) up for days,
-  dry-run. FreqUI localhost:8080.
+- **Live bot:** two containers (`freqtrade`, `freqtrade-pairlist`), dry-run.
+  FreqUI localhost:8080. **500-USDT TEST since 2026-07-20** (~2 months, to
+  ~2026-09-20): wallet 500, orders $5, per-coin cap $50, fresh DB (old history
+  in tradesv3.sqlite.bak-pre500-20260720). Success metric = drawdown control +
+  clean rotation + no trapped capital, not profit. Berserk verdicts: live
+  config final; candidate REJECTED (2× crash deployment); age cap proven
+  (OFF doubles crash loss).
 - **R&D sprint (17→19 July): DONE.** All four deliverables built, tested,
   committed: synthetic stress tests (Tier A+B), walk-forward Optuna, win-prob
   model, offline relearn orchestrator. Plus the 5-DAY DEAL AGE CAP
