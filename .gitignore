@@ -44,3 +44,6 @@ freqtrade/user_data/analysis/
 
 # Generated weekly operator summaries
 Analysis And Reports/weekly/
+
+# Live deployment credentials (NEVER commit)
+DEPLOYMENT_CREDENTIALS.local.md

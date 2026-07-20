@@ -18,13 +18,23 @@ findings), then DEVLOG.md TOP entry (newest-first) for anything newer.
   Remote `origin` = https://github.com/ajay42/waverider_evolved —
   **PUSH PENDING: Ajay must run `git push -u origin main` himself** (interactive
   GCM auth; Claude cannot complete the popup).
-- **Live bot:** two containers (`freqtrade`, `freqtrade-pairlist`), dry-run.
-  FreqUI localhost:8080. **500-USDT TEST since 2026-07-20** (~2 months, to
-  ~2026-09-20): wallet 500, orders $5, per-coin cap $50, fresh DB (old history
-  in tradesv3.sqlite.bak-pre500-20260720). Success metric = drawdown control +
-  clean rotation + no trapped capital, not profit. Berserk verdicts: live
-  config final; candidate REJECTED (2× crash deployment); age cap proven
-  (OFF doubles crash loss).
+- **DEPLOYED TO CLOUD 2026-07-20:** Hetzner VPS `91.98.156.205` (Ubuntu 26.04,
+  1vCPU/1.9G+2G swap), user `waverider`, SSH key `~/.ssh/waverider_deploy`
+  (root disabled, key-only, firewall SSH-only, health cron, log rotation).
+  Both containers running dry-run there. Project at `~/waverider/freqtrade`.
+  Connection + FreqUI creds + go-live checklist in **DEPLOYMENT_CREDENTIALS.local.md**
+  (git-ignored, this PC). LOCAL bot STOPPED — cloud is the single source of
+  truth. Local machine = dev/backtest env only.
+- **500-USDT TEST since 2026-07-20** (~2 months, to ~2026-09-20): wallet 500,
+  orders $5 (base_order_size_usd, via custom_stake_amount), per-coin cap $50,
+  60% aggregate ceiling = $300 fresh. Success metric = drawdown control + clean
+  rotation + no trapped capital, NOT profit. Berserk verdicts: live config
+  final; candidate REJECTED (2× crash deployment); age cap proven (OFF doubles
+  crash loss). First hours: sidecar selecting with quality floor working
+  (left slots empty for sub-2.0 coins), base orders opening at $5.
+- Next step (Ajay's flow): monitor the 2-month test; go live (Stage B) is a
+  later deliberate step — Ajay adds spot-only/no-withdrawal/IP-locked Binance
+  keys himself per the checklist.
 - **R&D sprint (17→19 July): DONE.** All four deliverables built, tested,
   committed: synthetic stress tests (Tier A+B), walk-forward Optuna, win-prob
   model, offline relearn orchestrator. Plus the 5-DAY DEAL AGE CAP
