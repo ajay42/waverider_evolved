@@ -25,7 +25,15 @@ findings), then DEVLOG.md TOP entry (newest-first) for anything newer.
   Connection + FreqUI creds + go-live checklist in **DEPLOYMENT_CREDENTIALS.local.md**
   (git-ignored, this PC). LOCAL bot STOPPED — cloud is the single source of
   truth. Local machine = dev/backtest env only.
-- **500-USDT TEST since 2026-07-20** (~2 months, to ~2026-09-20): wallet 500,
+- **WENT LIVE (real money) 2026-07-20 ~15:46 UTC.** dry_run=false, real orders
+  filling (KITE, PUMP first fills). Binance key: spot ON, withdrawals OFF,
+  IP-locked to 91.98.156.205, futures/margin OFF (verified). DB was cleared of
+  dry-run phantom trades before live start (backup tradesv3.sqlite.dryrun-bak-20260720).
+  Real balance ~265 USDT (Ajay adding more toward 500). Base orders land at
+  ~$7.5 (Binance min-notional bumps the $5 base). Helpers on server:
+  set_keys.py, go_live.sh, verify_keys.py, check_perms.py. Emergency stop:
+  `docker compose stop freqtrade`.
+- **500-USDT TEST since 2026-07-20** (~2 months, to ~2026-09-20): target wallet 500,
   orders $5 (base_order_size_usd, via custom_stake_amount), per-coin cap $50,
   60% aggregate ceiling = $300 fresh. Success metric = drawdown control + clean
   rotation + no trapped capital, NOT profit. Berserk verdicts: live config
