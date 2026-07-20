@@ -79,6 +79,10 @@ def parse_run(path: Path) -> dict:
 VARIANT_SUFFIXES = [
     "no_governors", "all_m15_v105", "brake_only_m15", "freeze_agg_fixed",
     "all_m15", "all_on",
+    # berserk battery
+    "age_cap_off", "lifecycle_off", "candidate", "live",
+    # profit battery (levers #3/#4)
+    "waveup", "conc_deep", "conc_big",
 ]
 # The "governors ON" variant name differs by result set (tail uses all_m15,
 # synthetic uses all_on) - try each.
